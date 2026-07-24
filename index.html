@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prototipo del Observatorio de servicios públicos, economía social y vivienda.">
+  <title>Observatorio de servicios públicos</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --surface: #ffffff;
+      --surface-2: #eef3f9;
+      --text: #172033;
+      --muted: #667085;
+      --line: #dce4ef;
+      --primary: #1857c9;
+      --primary-2: #0f3d91;
+      --success: #16865d;
+      --warning: #a45b00;
+      --danger: #b42318;
+      --shadow: 0 14px 35px rgba(20, 37, 63, 0.08);
+      --radius: 18px;
+    }
+    [data-theme="dark"] {
+      --bg: #0d1420;
+      --surface: #151f2e;
+      --surface-2: #1b2839;
+      --text: #edf3fb;
+      --muted: #a9b7ca;
+      --line: #2a3a4f;
+      --primary: #78a8ff;
+      --primary-2: #a7c4ff;
+      --success: #4fd1a1;
+      --warning: #f2b35b;
+      --danger: #ff8178;
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.24);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+    button, select, input { font: inherit; }
+    button { cursor: pointer; }
+    a { color: inherit; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: color-mix(in srgb, var(--bg) 82%, transparent);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar-inner {
+      width: min(1440px, calc(100% - 32px));
+      margin: auto;
+      min-height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(135deg, #0b3d91, #3d7fea);
+      box-shadow: var(--shadow);
+    }
+    .top-actions { display: flex; gap: 8px; align-items: center; }
+    .icon-button, .secondary-button, .primary-button {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+      color: var(--text);
+      min-height: 40px;
+      padding: 0 14px;
+      font-weight: 700;
+    }
+    .primary-button {
+      border-color: transparent;
+      color: white;
+      background: linear-gradient(135deg, var(--primary-2), var(--primary));
+    }
+    .layout {
+      width: min(1440px, calc(100% - 32px));
+      margin: 28px auto 64px;
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 24px;
+    }
+    .sidebar {
+      position: sticky;
+      top: 90px;
+      height: max-content;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .sidebar a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 700;
+      padding: 10px 12px;
+      border-radius: 11px;
+      margin: 3px 0;
+    }
+    .sidebar a:hover, .sidebar a.active { color: var(--primary); background: var(--surface-2); }
+    .main { min-width: 0; }
+    .hero {
+      overflow: hidden;
+      position: relative;
+      padding: 36px;
+      min-height: 310px;
+      border-radius: 26px;
+      color: white;
+      background:
+        radial-gradient(circle at 82% 24%, rgba(108, 172, 255, .55), transparent 30%),
+        linear-gradient(125deg, #0b2d6b, #145ecb 58%, #2f83ed);
+      box-shadow: 0 24px 56px rgba(18, 71, 155, .26);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      right: -110px;
+      bottom: -180px;
+      border: 55px solid rgba(255,255,255,.11);
+      border-radius: 50%;
+    }
+    .eyebrow {
+      margin: 0 0 12px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .76rem;
+      font-weight: 800;
+      opacity: .78;
+    }
+    .hero h1 {
+      max-width: 850px;
+      margin: 0;
+      font-size: clamp(2.1rem, 5vw, 4.6rem);
+      line-height: .98;
+      letter-spacing: -.055em;
+    }
+    .hero p {
+      max-width: 780px;
+      margin: 22px 0 0;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.86);
+    }
+    .hero-status {
+      margin-top: 26px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .hero-pill {
+      border: 1px solid rgba(255,255,255,.24);
+      background: rgba(255,255,255,.12);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-weight: 700;
+      font-size: .9rem;
+    }
+    .demo-banner {
+      margin-top: 16px;
+      padding: 13px 16px;
+      border-radius: 14px;
+      border: 1px solid color-mix(in srgb, var(--warning) 35%, var(--line));
+      background: color-mix(in srgb, var(--warning) 10%, var(--surface));
+      color: var(--text);
+      font-size: .92rem;
+    }
+    .grid { display: grid; gap: 16px; }
+    .kpi-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 18px; }
+    .card {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .kpi { padding: 20px; }
+    .kpi-label { color: var(--muted); font-size: .84rem; font-weight: 750; }
+    .kpi-value { margin-top: 6px; font-size: 2rem; font-weight: 850; letter-spacing: -.04em; }
+    .kpi-note { margin-top: 4px; color: var(--muted); font-size: .83rem; }
+    section { scroll-margin-top: 90px; }
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin: 38px 0 14px;
+    }
+    .section-heading h2 { margin: 0; font-size: 1.65rem; letter-spacing: -.025em; }
+    .section-heading p { margin: 5px 0 0; color: var(--muted); }
+    .panel { padding: 22px; }
+    .filters {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    label span { display: block; margin-bottom: 6px; color: var(--muted); font-size: .8rem; font-weight: 800; }
+    select, input[type="search"] {
+      width: 100%;
+      min-height: 44px;
+      padding: 0 12px;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      outline: none;
+    }
+    .chart-grid { grid-template-columns: minmax(0, 2fr) minmax(250px, .8fr); }
+    .chart-wrap { min-height: 360px; }
+    canvas { width: 100%; height: 320px; display: block; }
+    .latest-box {
+      height: 100%;
+      padding: 22px;
+      border-radius: 16px;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+    }
+    .latest-value { margin: 8px 0 0; font-size: 2.55rem; font-weight: 850; letter-spacing: -.05em; }
+    .latest-meta { color: var(--muted); font-size: .9rem; }
+    .delta { margin: 12px 0 18px; font-weight: 800; color: var(--success); }
+    .source-list { display: grid; gap: 9px; margin-top: 14px; }
+    .source-row { display: flex; justify-content: space-between; gap: 12px; font-size: .86rem; }
+    .source-row span:first-child { color: var(--muted); }
+    .catalog-toolbar {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+    .catalog-toolbar input { max-width: 420px; }
+    .catalog-row-connected { cursor: pointer; }
+    .catalog-row-connected:hover { background: var(--surface-2); }
+    .series-button {
+      border: 1px solid color-mix(in srgb, var(--primary) 35%, var(--line));
+      background: color-mix(in srgb, var(--primary) 9%, var(--surface));
+      color: var(--primary);
+      border-radius: 9px;
+      padding: 6px 10px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .series-button[disabled] { cursor: default; opacity: .45; color: var(--muted); }
+    .topic-card.clickable { cursor: pointer; transition: transform .16s ease, border-color .16s ease; }
+    .topic-card.clickable:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--primary) 40%, var(--line)); }
+    .data-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
+    .data-actions a { text-decoration: none; display: inline-flex; align-items: center; }
+    .legend { display: flex; gap: 8px; flex-wrap: wrap; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: .74rem;
+      font-weight: 850;
+      border: 1px solid var(--line);
+    }
+    .badge.high, .badge.auto { color: var(--success); background: color-mix(in srgb, var(--success) 10%, var(--surface)); }
+    .badge.partial, .badge.semi { color: var(--warning); background: color-mix(in srgb, var(--warning) 11%, var(--surface)); }
+    .badge.low, .badge.manual { color: var(--danger); background: color-mix(in srgb, var(--danger) 9%, var(--surface)); }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; }
+    table { width: 100%; border-collapse: collapse; min-width: 940px; }
+    th, td { padding: 13px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-size: .76rem; text-transform: uppercase; letter-spacing: .055em; background: var(--surface-2); }
+    td { font-size: .9rem; }
+    tr:last-child td { border-bottom: 0; }
+    .category-title { font-weight: 850; }
+    .cards-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .topic-card { padding: 20px; }
+    .topic-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      font-size: 1.25rem;
+      background: var(--surface-2);
+    }
+    .topic-card h3 { margin: 15px 0 6px; }
+    .topic-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .topic-meta { margin-top: 16px; display: flex; justify-content: space-between; color: var(--muted); font-size: .83rem; }
+    .method-grid { grid-template-columns: 1.15fr .85fr; }
+    .method-list { display: grid; gap: 12px; }
+    .method-item { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; }
+    .method-number {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      color: var(--primary);
+      background: var(--surface-2);
+      font-weight: 850;
+    }
+    pre {
+      margin: 0;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      overflow-x: auto;
+      color: var(--text);
+      background: var(--surface-2);
+      font: 13px/1.55 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    footer { margin-top: 34px; color: var(--muted); text-align: center; font-size: .85rem; }
+    .mobile-nav { display: none; }
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin-right: 7px;
+      border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--success) 15%, transparent);
+    }
+    .toast {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 100;
+      max-width: 360px;
+      padding: 13px 16px;
+      border-radius: 14px;
+      color: white;
+      background: #172033;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transform: translateY(12px);
+      pointer-events: none;
+      transition: .25s ease;
+    }
+    .toast.visible { opacity: 1; transform: translateY(0); }
+    @media (max-width: 1050px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+      .mobile-nav { display: block; margin-bottom: 14px; }
+      .mobile-nav select { background: var(--surface); }
+      .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cards-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .chart-grid, .method-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      .topbar-inner, .layout { width: min(100% - 20px, 1440px); }
+      .brand span:last-child { display: none; }
+      .hero { padding: 26px 22px; }
+      .hero h1 { font-size: 2.5rem; }
+      .kpi-grid, .cards-3 { grid-template-columns: 1fr; }
+      .filters { grid-template-columns: 1fr; }
+      .panel { padding: 16px; }
+      .section-heading { align-items: start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">OS</div>
+        <span>Observatorio de servicios públicos</span>
+      </div>
+      <div class="top-actions">
+        <button class="secondary-button" id="refreshButton">Actualizar</button>
+        <button class="icon-button" id="themeButton" aria-label="Cambiar tema">◐</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar" aria-label="Secciones principales">
+      <a href="#resumen" class="active">◉ Resumen</a>
+      <a href="#explorador">⌁ Explorador</a>
+      <a href="#catalogo">▦ Catálogo</a>
+      <a href="#areas">◇ Áreas</a>
+      <a href="#metodologia">≡ Metodología</a>
+      <a href="#actualizacion">↻ Actualización</a>
+    </nav>
+
+    <main class="main">
+      <div class="mobile-nav">
+        <select id="mobileNav" aria-label="Ir a una sección">
+          <option value="#resumen">Resumen</option>
+          <option value="#explorador">Explorador</option>
+          <option value="#catalogo">Catálogo</option>
+          <option value="#areas">Áreas</option>
+          <option value="#metodologia">Metodología</option>
+          <option value="#actualizacion">Actualización</option>
+        </select>
+      </div>
+
+      <section id="resumen">
+        <div class="hero">
+          <p class="eyebrow">España · ámbito nacional y autonómico</p>
+          <h1>Datos públicos claros, comparables y trazables.</h1>
+          <p>Un panel para seguir enseñanza, sanidad, dependencia, pensiones, residencias, economía, empleo y vivienda, conservando la fuente, el periodo y cada revisión.</p>
+          <div class="hero-status">
+            <span class="hero-pill"><span class="status-dot"></span>Comprobación diaria a las 09:00</span>
+            <span class="hero-pill" id="heroLastCheck">Última comprobación: —</span>
+            <span class="hero-pill" id="heroDataPeriod">Último periodo: —</span>
+          </div>
+        </div>
+        <div class="demo-banner" id="demoBanner"><strong>Prototipo:</strong> la interfaz y la automatización están preparadas. Las series gráficas incluidas son datos normalizados de demostración hasta conectar cada fuente oficial.</div>
+
+        <div class="grid kpi-grid">
+          <article class="card kpi"><div class="kpi-label">Indicadores catalogados</div><div class="kpi-value" id="kpiIndicators">—</div><div class="kpi-note">Con definición, fuente y frecuencia</div></article>
+          <article class="card kpi"><div class="kpi-label">Áreas temáticas</div><div class="kpi-value" id="kpiCategories">—</div><div class="kpi-note">Desde enseñanza hasta vivienda</div></article>
+          <article class="card kpi"><div class="kpi-label">Series conectadas</div><div class="kpi-value" id="kpiAutomatic">—</div><div class="kpi-note">Con datos oficiales ya visibles</div></article>
+          <article class="card kpi"><div class="kpi-label">Fuentes conectadas</div><div class="kpi-value" id="kpiSources">—</div><div class="kpi-note">Organismos estadísticos oficiales</div></article>
+        </div>
+      </section>
+
+      <section id="explorador">
+        <div class="section-heading">
+          <div><h2>Explorador de series</h2><p>La página recarga el archivo JSON cada cinco minutos y redibuja los gráficos cuando cambia.</p></div>
+        </div>
+        <div class="card panel">
+          <div class="filters">
+            <label><span>Indicador</span><select id="indicatorSelect"></select></label>
+            <label><span>Territorio</span><select id="territorySelect"></select></label>
+            <label><span>Visualización</span><select id="viewSelect"><option value="absolute">Valor</option><option value="index">Índice base 100</option></select></label>
+          </div>
+          <div class="grid chart-grid">
+            <div class="chart-wrap"><canvas id="seriesChart" aria-label="Gráfico de evolución temporal"></canvas></div>
+            <aside class="latest-box">
+              <div class="kpi-label">Último valor disponible</div>
+              <div class="latest-value" id="latestValue">—</div>
+              <div class="latest-meta" id="latestPeriod">—</div>
+              <div class="delta" id="latestDelta">—</div>
+              <div class="source-list">
+                <div class="source-row"><span>Unidad</span><strong id="latestUnit">—</strong></div>
+                <div class="source-row"><span>Frecuencia</span><strong id="latestFrequency">—</strong></div>
+                <div class="source-row"><span>Fuente</span><strong id="latestSource">—</strong></div>
+                <div class="source-row"><span>Estado</span><strong id="latestStatus">—</strong></div>
+              </div>
+              <div class="data-actions">
+                <a class="secondary-button" id="sourceLink" href="#" target="_blank" rel="noopener">Abrir fuente</a>
+                <button class="secondary-button" id="downloadCsv" type="button">Descargar CSV</button>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalogo">
+        <div class="section-heading">
+          <div><h2>Catálogo de indicadores</h2><p>Evaluación inicial de disponibilidad, automatización y frecuencia de publicación.</p></div>
+        </div>
+        <div class="card panel">
+          <div class="catalog-toolbar">
+            <input type="search" id="catalogSearch" placeholder="Buscar indicador, organismo o categoría…">
+            <div class="legend">
+              <span class="badge high">Disponibilidad alta</span>
+              <span class="badge partial">Parcial</span>
+              <span class="badge low">Baja</span>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Área</th><th>Indicador</th><th>Disponibilidad</th><th>Automatización</th><th>Frecuencia</th><th>Fuente principal</th><th>Datos</th></tr></thead>
+              <tbody id="catalogBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="areas">
+        <div class="section-heading">
+          <div><h2>Áreas temáticas</h2><p>Cada área agrupa indicadores comparables y conserva las diferencias metodológicas relevantes.</p></div>
+        </div>
+        <div class="grid cards-3" id="topicCards"></div>
+      </section>
+
+      <section id="metodologia">
+        <div class="section-heading">
+          <div><h2>Metodología y trazabilidad</h2><p>La fecha de consulta nunca sustituye al periodo real del dato.</p></div>
+        </div>
+        <div class="grid method-grid">
+          <article class="card panel">
+            <div class="method-list">
+              <div class="method-item"><div class="method-number">1</div><div><strong>Descarga</strong><br><span class="latest-meta">API, CSV, Excel o registro oficial.</span></div></div>
+              <div class="method-item"><div class="method-number">2</div><div><strong>Validación</strong><br><span class="latest-meta">Columnas, territorios, duplicados, unidades y valores atípicos.</span></div></div>
+              <div class="method-item"><div class="method-number">3</div><div><strong>Normalización</strong><br><span class="latest-meta">Mismo esquema de observaciones para todas las fuentes.</span></div></div>
+              <div class="method-item"><div class="method-number">4</div><div><strong>Versionado</strong><br><span class="latest-meta">Se conservan el archivo original, la huella y las revisiones.</span></div></div>
+              <div class="method-item"><div class="method-number">5</div><div><strong>Publicación</strong><br><span class="latest-meta">El panel se actualiza sin presentar como “de hoy” un dato antiguo.</span></div></div>
+            </div>
+          </article>
+          <article class="card panel">
+<pre>{
+  "indicator_id": "ss_affiliates_total",
+  "territory_code": "ES-AN",
+  "period": "2026-06",
+  "value": 3498125,
+  "unit": "personas",
+  "publication_date": "2026-07-02",
+  "retrieved_at": "2026-07-24T09:01:34+02:00",
+  "status": "provisional",
+  "source": "Seguridad Social"
+}</pre>
+          </article>
+        </div>
+      </section>
+
+      <section id="actualizacion">
+        <div class="section-heading">
+          <div><h2>Actualización automática</h2><p>El navegador consulta el JSON periódicamente; GitHub Actions ejecuta el recolector todos los días.</p></div>
+        </div>
+        <div class="grid cards-3">
+          <article class="card topic-card"><div class="topic-icon">09</div><h3>Comprobación diaria</h3><p>El flujo se programa para las 09:00 de Madrid y detecta si hay archivos o series nuevas.</p><div class="topic-meta"><span>Planificador</span><strong>GitHub Actions</strong></div></article>
+          <article class="card topic-card"><div class="topic-icon">↻</div><h3>Recarga del panel</h3><p>La interfaz vuelve a solicitar <code>dashboard.json</code> cada cinco minutos, evitando la caché.</p><div class="topic-meta"><span>Intervalo</span><strong>5 minutos</strong></div></article>
+          <article class="card topic-card"><div class="topic-icon">✓</div><h3>Fallo seguro</h3><p>Si una fuente cambia de formato, se conserva el último dato válido y queda registrada la incidencia.</p><div class="topic-meta"><span>Política</span><strong>No sobrescribir</strong></div></article>
+        </div>
+      </section>
+
+      <footer>Observatorio de servicios públicos · Series oficiales con indicación de fuente, periodo y carácter provisional o experimental.</footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const state = { data: null, selectedIndicator: null, selectedTerritory: null };
+    const $ = (id) => document.getElementById(id);
+    const esc = (value) => String(value ?? "").replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+    const formatDateTime = (iso) => {
+      if (!iso) return "—";
+      const d = new Date(iso);
+      return Number.isNaN(d.getTime()) ? iso : new Intl.DateTimeFormat('es-ES', {dateStyle:'medium', timeStyle:'short', timeZone:'Europe/Madrid'}).format(d);
+    };
+    const formatNumber = (value, decimals = 0) => new Intl.NumberFormat('es-ES', {maximumFractionDigits: decimals}).format(value);
+    const toast = (message) => {
+      $('toast').textContent = message;
+      $('toast').classList.add('visible');
+      clearTimeout(window.__toastTimer);
+      window.__toastTimer = setTimeout(() => $('toast').classList.remove('visible'), 2600);
+    };
+
+    async function loadData({notify = false} = {}) {
+      try {
+        const response = await fetch(`data/dashboard.json?cache=${Date.now()}`, {cache: 'no-store'});
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        const changed = !state.data || state.data.meta?.dataset_version !== data.meta?.dataset_version;
+        state.data = data;
+        renderAll();
+        if (notify) toast(changed ? 'Datos recargados.' : 'No hay una versión nueva.');
+      } catch (error) {
+        console.error(error);
+        toast('No se pudo leer data/dashboard.json. Abre la carpeta mediante un servidor local.');
+      }
+    }
+
+    function renderAll() {
+      renderHeader();
+      renderKpis();
+      renderCatalog();
+      renderTopics();
+      populateIndicatorSelect();
+      renderSeries();
+    }
+
+    function renderHeader() {
+      const meta = state.data.meta;
+      $('heroLastCheck').textContent = `Última comprobación: ${formatDateTime(meta.last_checked)}`;
+      $('heroDataPeriod').textContent = `Último periodo: ${meta.latest_period || '—'}`;
+      const label = meta.demo ? 'Prototipo' : 'Estado';
+      $('demoBanner').innerHTML = `<strong>${label}:</strong> ${esc(meta.notice || 'Datos oficiales conectados.')}`;
+      $('demoBanner').style.display = 'block';
+    }
+
+    function renderKpis() {
+      const indicators = state.data.catalog;
+      const categories = new Set(indicators.map(d => d.category));
+      const connectedSeries = state.data.series.length;
+      const sources = new Set(state.data.series.map(d => d.source));
+      $('kpiIndicators').textContent = indicators.length;
+      $('kpiCategories').textContent = categories.size;
+      $('kpiAutomatic').textContent = connectedSeries;
+      $('kpiSources').textContent = sources.size;
+    }
+
+    function availabilityBadge(value) {
+      const map = { high: ['Alta','high'], partial: ['Parcial','partial'], low: ['Baja','low'] };
+      const [label, cls] = map[value] || [value, 'partial'];
+      return `<span class="badge ${cls}">${label}</span>`;
+    }
+    function automationBadge(value) {
+      const map = { automatic: ['Automática','auto'], semi: ['Semiautomática','semi'], manual: ['Manual','manual'] };
+      const [label, cls] = map[value] || [value, 'semi'];
+      return `<span class="badge ${cls}">${label}</span>`;
+    }
+
+    function renderCatalog() {
+      const query = $('catalogSearch').value.trim().toLocaleLowerCase('es');
+      const rows = state.data.catalog.filter(item => [item.category, item.name, item.source, item.frequency].join(' ').toLocaleLowerCase('es').includes(query));
+      $('catalogBody').innerHTML = rows.map(item => `
+        <tr class="${item.series_id ? 'catalog-row-connected' : ''}" data-series-id="${esc(item.series_id || '')}">
+          <td class="category-title">${esc(item.category)}</td>
+          <td>${esc(item.name)}</td>
+          <td>${availabilityBadge(item.availability)}</td>
+          <td>${automationBadge(item.automation)}</td>
+          <td>${esc(item.frequency)}</td>
+          <td>${esc(item.source)}</td>
+          <td><button class="series-button" ${item.series_id ? '' : 'disabled'} data-series-id="${esc(item.series_id || '')}">${item.series_id ? 'Ver serie' : 'Pendiente'}</button></td>
+        </tr>`).join('');
+    }
+
+    const topicIcons = { 'Enseñanza':'▤', 'Sanidad':'✚', 'Dependencia':'⌂', 'Pensiones y jubilación':'◴', 'Residencias':'⌂', 'Economía y empleo':'⌁', 'Renta y riqueza':'◈', 'Vivienda':'▱' };
+    function renderTopics() {
+      const grouped = state.data.catalog.reduce((acc, item) => { (acc[item.category] ||= []).push(item); return acc; }, {});
+      $('topicCards').innerHTML = Object.entries(grouped).map(([category, items]) => {
+        const connected = items.filter(i => i.series_id);
+        const firstSeries = connected[0]?.series_id || '';
+        return `<article class="card topic-card ${firstSeries ? 'clickable' : ''}" data-series-id="${esc(firstSeries)}"><div class="topic-icon">${topicIcons[category] || '◇'}</div><h3>${esc(category)}</h3><p>${esc(items[0]?.summary || 'Indicadores nacionales y autonómicos con trazabilidad metodológica.')}</p><div class="topic-meta"><span>${items.length} indicadores</span><strong>${connected.length} conectados</strong></div></article>`;
+      }).join('');
+    }
+
+    function populateIndicatorSelect() {
+      const current = $('indicatorSelect').value || state.selectedIndicator;
+      $('indicatorSelect').innerHTML = state.data.series.map(series => `<option value="${esc(series.id)}">${esc(series.name)}</option>`).join('');
+      if (current && state.data.series.some(s => s.id === current)) $('indicatorSelect').value = current;
+      state.selectedIndicator = $('indicatorSelect').value;
+      populateTerritories();
+    }
+
+    function populateTerritories() {
+      const series = state.data.series.find(s => s.id === $('indicatorSelect').value);
+      const current = $('territorySelect').value || state.selectedTerritory;
+      $('territorySelect').innerHTML = (series?.territories || []).map(t => `<option value="${esc(t.code)}">${esc(t.name)}</option>`).join('');
+      if (current && series?.territories.some(t => t.code === current)) $('territorySelect').value = current;
+      state.selectedTerritory = $('territorySelect').value;
+    }
+
+    function getSelectedSeries() {
+      const series = state.data.series.find(s => s.id === $('indicatorSelect').value);
+      const territory = series?.territories.find(t => t.code === $('territorySelect').value);
+      return {series, territory};
+    }
+
+    function renderSeries() {
+      const {series, territory} = getSelectedSeries();
+      if (!series || !territory) return;
+      let points = territory.points.map(p => ({...p}));
+      const view = $('viewSelect').value;
+      let unit = series.unit;
+      if (view === 'index' && points.length) {
+        const base = points[0].value;
+        points = points.map(p => ({...p, value: base ? p.value / base * 100 : 0}));
+        unit = 'Índice base 100';
+      }
+      drawLineChart($('seriesChart'), points, series.name, unit);
+      const latest = points.at(-1);
+      const previous = points.at(-2);
+      const decimals = series.decimals ?? 0;
+      $('latestValue').textContent = latest ? `${formatNumber(latest.value, view === 'index' ? 1 : decimals)}${series.symbol || ''}` : '—';
+      $('latestPeriod').textContent = latest ? `Periodo de referencia: ${latest.period}` : '—';
+      const delta = latest && previous && previous.value ? ((latest.value - previous.value) / previous.value) * 100 : null;
+      $('latestDelta').textContent = delta === null ? 'Sin comparación anterior' : `${delta >= 0 ? '+' : ''}${formatNumber(delta, 1)} % frente al periodo anterior`;
+      $('latestDelta').style.color = delta !== null && delta < 0 ? 'var(--danger)' : 'var(--success)';
+      $('latestUnit').textContent = unit;
+      $('latestFrequency').textContent = series.frequency;
+      $('latestSource').textContent = series.source;
+      $('latestStatus').textContent = series.status;
+      $('sourceLink').href = series.source_url || '#';
+      $('sourceLink').style.display = series.source_url ? 'inline-flex' : 'none';
+    }
+
+    function openSeries(seriesId) {
+      if (!seriesId || !state.data.series.some(series => series.id === seriesId)) return;
+      $('indicatorSelect').value = seriesId;
+      state.selectedIndicator = seriesId;
+      state.selectedTerritory = 'ES';
+      populateTerritories();
+      if ([...$('territorySelect').options].some(option => option.value === 'ES')) $('territorySelect').value = 'ES';
+      renderSeries();
+      document.querySelector('#explorador')?.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+
+    function downloadSelectedCsv() {
+      const {series, territory} = getSelectedSeries();
+      if (!series || !territory) return;
+      const quote = value => `"${String(value ?? '').replaceAll('"', '""')}"`;
+      const lines = [
+        ['indicador_id','indicador','territorio_codigo','territorio','periodo','valor','unidad','fuente'].map(quote).join(';'),
+        ...territory.points.map(point => [series.id,series.name,territory.code,territory.name,point.period,point.value,series.unit,series.source].map(quote).join(';'))
+      ];
+      const blob = new Blob(['\ufeff' + lines.join('\n')], {type:'text/csv;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `${series.id}_${territory.code}.csv`;
+      link.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function drawLineChart(canvas, points, title, unit) {
+      const ratio = Math.max(1, window.devicePixelRatio || 1);
+      const rect = canvas.getBoundingClientRect();
+      const width = Math.max(620, rect.width || 620);
+      const height = 320;
+      canvas.width = width * ratio;
+      canvas.height = height * ratio;
+      const ctx = canvas.getContext('2d');
+      ctx.scale(ratio, ratio);
+      const css = getComputedStyle(document.documentElement);
+      const text = css.getPropertyValue('--text').trim();
+      const muted = css.getPropertyValue('--muted').trim();
+      const line = css.getPropertyValue('--line').trim();
+      const primary = css.getPropertyValue('--primary').trim();
+      ctx.clearRect(0, 0, width, height);
+      const margin = {left: 66, right: 18, top: 30, bottom: 48};
+      const plotW = width - margin.left - margin.right;
+      const plotH = height - margin.top - margin.bottom;
+      if (!points.length) return;
+      const values = points.map(p => Number(p.value));
+      let min = Math.min(...values), max = Math.max(...values);
+      const spread = max - min || Math.abs(max) * .1 || 1;
+      min -= spread * .16; max += spread * .16;
+      ctx.font = '12px system-ui';
+      ctx.fillStyle = muted;
+      ctx.strokeStyle = line;
+      ctx.lineWidth = 1;
+      for (let i=0; i<=4; i++) {
+        const y = margin.top + plotH * i / 4;
+        ctx.beginPath(); ctx.moveTo(margin.left, y); ctx.lineTo(width - margin.right, y); ctx.stroke();
+        const val = max - (max-min) * i / 4;
+        ctx.fillText(formatNumber(val, Math.abs(max) < 1000 ? 1 : 0), 4, y + 4);
+      }
+      const xFor = i => margin.left + (points.length === 1 ? plotW/2 : plotW * i/(points.length-1));
+      const yFor = value => margin.top + (max-value)/(max-min) * plotH;
+      ctx.beginPath();
+      points.forEach((p,i) => { const x=xFor(i), y=yFor(Number(p.value)); i ? ctx.lineTo(x,y) : ctx.moveTo(x,y); });
+      ctx.strokeStyle = primary; ctx.lineWidth = 3; ctx.lineJoin='round'; ctx.lineCap='round'; ctx.stroke();
+      points.forEach((p,i) => { const x=xFor(i), y=yFor(Number(p.value)); ctx.beginPath(); ctx.arc(x,y,4,0,Math.PI*2); ctx.fillStyle=primary; ctx.fill(); });
+      const step = Math.max(1, Math.ceil(points.length / 7));
+      points.forEach((p,i) => { if (i % step !== 0 && i !== points.length-1) return; ctx.fillStyle=muted; ctx.textAlign='center'; ctx.fillText(p.period, xFor(i), height-20); });
+      ctx.textAlign='left'; ctx.fillStyle=text; ctx.font='700 13px system-ui'; ctx.fillText(`${title} · ${unit}`, margin.left, 17);
+    }
+
+    $('refreshButton').addEventListener('click', () => loadData({notify:true}));
+    $('themeButton').addEventListener('click', () => {
+      const root = document.documentElement;
+      root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('osp-theme', root.dataset.theme);
+      renderSeries();
+    });
+    $('indicatorSelect').addEventListener('change', () => { state.selectedIndicator = $('indicatorSelect').value; populateTerritories(); renderSeries(); });
+    $('territorySelect').addEventListener('change', renderSeries);
+    $('viewSelect').addEventListener('change', renderSeries);
+    $('catalogSearch').addEventListener('input', renderCatalog);
+    $('catalogBody').addEventListener('click', event => openSeries(event.target.closest('[data-series-id]')?.dataset.seriesId));
+    $('topicCards').addEventListener('click', event => openSeries(event.target.closest('[data-series-id]')?.dataset.seriesId));
+    $('downloadCsv').addEventListener('click', downloadSelectedCsv);
+    $('mobileNav').addEventListener('change', e => document.querySelector(e.target.value)?.scrollIntoView());
+    window.addEventListener('resize', () => { clearTimeout(window.__resize); window.__resize=setTimeout(renderSeries,120); });
+    const savedTheme = localStorage.getItem('osp-theme');
+    if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+    loadData();
+    setInterval(() => loadData(), 5 * 60 * 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+name: Actualizar y publicar observatorio
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    # GitHub usa UTC. Se lanzan dos comprobaciones para cubrir CET y CEST.
+    - cron: "0 7,8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Decidir si corresponde actualizar
+        id: mode
+        shell: bash
+        run: |
+          SHOULD_UPDATE=false
+          SHOULD_DEPLOY=true
+
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            HOUR=$(TZ=Europe/Madrid date +%H)
+            if [ "$HOUR" = "09" ]; then
+              SHOULD_UPDATE=true
+            else
+              SHOULD_DEPLOY=false
+            fi
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            SHOULD_UPDATE=true
+          fi
+
+          echo "update=$SHOULD_UPDATE" >> "$GITHUB_OUTPUT"
+          echo "deploy=$SHOULD_DEPLOY" >> "$GITHUB_OUTPUT"
+
+      - name: Configurar Python
+        if: steps.mode.outputs.update == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Instalar lector de hojas XLS
+        if: steps.mode.outputs.update == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libreoffice-calc
+
+      - name: Instalar dependencias de Python
+        if: steps.mode.outputs.update == 'true'
+        run: python -m pip install -r requirements.txt
+
+      - name: Actualizar fuentes oficiales
+        if: steps.mode.outputs.update == 'true'
+        run: python scripts/update_data.py
+
+      - name: Guardar los datos actualizados
+        if: steps.mode.outputs.update == 'true'
+        shell: bash
+        run: |
+          git config user.name "observatorio-data-bot"
+          git config user.email "observatorio-data-bot@users.noreply.github.com"
+          git add data/dashboard.json
+          if git diff --cached --quiet; then
+            echo "No hay cambios en los datos."
+          else
+            git commit -m "Datos: actualización automática $(TZ=Europe/Madrid date +%F)"
+            git push
+          fi
+
+      - name: Preparar sitio estático
+        if: steps.mode.outputs.deploy == 'true'
+        shell: bash
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp .nojekyll _site/
+          cp -R data _site/data
+
+      - name: Configurar GitHub Pages
+        if: steps.mode.outputs.deploy == 'true'
+        uses: actions/configure-pages@v5
+
+      - name: Subir artefacto de Pages
+        if: steps.mode.outputs.deploy == 'true'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Publicar en GitHub Pages
+        if: steps.mode.outputs.deploy == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4
