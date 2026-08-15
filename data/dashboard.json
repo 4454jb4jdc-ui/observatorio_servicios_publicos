@@ -1,16 +1,16 @@
 {
   "meta": {
     "title": "Observatorio de servicios públicos",
-    "dataset_version": "20260724-2217-6f69c99897d0",
-    "last_checked": "2026-07-24T22:17:27+02:00",
-    "latest_period": "2026-06",
+    "dataset_version": "20260815-0957-1e52e1962344",
+    "last_checked": "2026-08-15T09:57:38+02:00",
+    "latest_period": "2026-07-31",
     "demo": false,
     "connected_series": 176,
     "source_checks": [
       {
         "source_id": "ine_population",
         "ok": true,
-        "checked_at": "2026-07-24T22:15:42+02:00",
+        "checked_at": "2026-08-15T09:56:08+02:00",
         "message": "20 territorios; 100 observaciones",
         "checksum": "ca351541b17582518a9d381ac14b84a85e71762deedeb1eaf71b1f96d97e05c1",
         "source_url": "https://www.ine.es/jaxiT3/files/t/csv_bdsc/67217.csv"
@@ -18,7 +18,7 @@
       {
         "source_id": "ine_regional_accounts",
         "ok": true,
-        "checked_at": "2026-07-24T22:16:01+02:00",
+        "checked_at": "2026-08-15T09:56:23+02:00",
         "message": "Serie hasta 2024; PIB y PIB por habitante para 20 territorios",
         "checksum": "0a08d2a45fb73e1875a61d8a2a14e5f8adaece86457d3cc9112b17662ddd9598",
         "source_url": "https://www.ine.es/daco/daco42/cre00/b2024/pr_cre.xlsx"
@@ -26,15 +26,15 @@
       {
         "source_id": "ine_epa",
         "ok": true,
-        "checked_at": "2026-07-24T22:16:11+02:00",
-        "message": "Serie hasta 2026T1; parados y tasa para 20 territorios",
-        "checksum": "5211db4bd53cfd862e60303eb56af18d1e466a9dfe073e19d5a5e94bcf6c86a8",
+        "checked_at": "2026-08-15T09:56:31+02:00",
+        "message": "Serie hasta 2026T2; parados y tasa para 20 territorios",
+        "checksum": "985427aab0067fcb0bfaf4e4aa74c728d86265a4851c647b87081d9f2a9dd203",
         "source_url": "https://www.ine.es/jaxiT3/files/t/es/csv_bdsc/65332.csv; https://www.ine.es/jaxiT3/files/t/es/csv_bdsc/65334.csv"
       },
       {
         "source_id": "ine_income_poverty",
         "ok": true,
-        "checked_at": "2026-07-24T22:16:13+02:00",
+        "checked_at": "2026-08-15T09:56:33+02:00",
         "message": "ECV hasta 2025; renta y pobreza para 20 territorios",
         "checksum": "7e7d3bba73253a0974f28f3d35be1cd04ef44f82386cab8eb34c0c4902ebba91",
         "source_url": "https://www.ine.es/jaxiT3/files/t/es/csv_bdsc/9947.csv; https://www.ine.es/jaxiT3/files/t/es/csv_bdsc/9963.csv"
@@ -42,31 +42,31 @@
       {
         "source_id": "social_security_affiliation",
         "ok": true,
-        "checked_at": "2026-07-24T22:16:16+02:00",
-        "message": "Informe 2026-06; 20 territorios",
-        "checksum": "4767002fe27786ea2cdd6e49baf3ef2f4c004b411fa2350a7a1a854e16bd3f37",
-        "source_url": "https://www.seg-social.es/wps/wcm/connect/wss/be59e035-5777-4cf8-96bc-f585ccbb6580/16_Informe+Mensual+Afiliados+CCAA-202606.pdf?MOD=AJPERES&CONVERT_TO=linktext&CACHEID=ROOTWORKSPACE.Z18_2G50H38209D640QTQ57OVB2000-be59e035-5777-4cf8-96bc-f585ccbb6580-pYxBTMJ"
+        "checked_at": "2026-08-15T09:56:36+02:00",
+        "message": "Informe 2026-07; 20 territorios",
+        "checksum": "8ccb7f9d3fc3382abf4648dd3147a696e6f4828639aff6e55df877a8e3e5d15e",
+        "source_url": "https://www.seg-social.es/wps/wcm/connect/wss/be59e035-5777-4cf8-96bc-f585ccbb6580/16_Informe+Mensual+Afiliados+CCAA+202607.pdf?MOD=AJPERES&CONVERT_TO=linktext&CACHEID=ROOTWORKSPACE.Z18_81D21J401P5L40QTIT61G41000-be59e035-5777-4cf8-96bc-f585ccbb6580-p.byliU"
       },
       {
         "source_id": "sepe_registered_unemployment",
         "ok": true,
-        "checked_at": "2026-07-24T22:16:19+02:00",
-        "message": "Periodo 2026-06; 20 territorios",
-        "checksum": "b15edfd06233153d24b187234f94f177b4ed4191f2c87eaf6b11a218c06d8f08",
+        "checked_at": "2026-08-15T09:56:39+02:00",
+        "message": "Periodo 2026-07; 20 territorios",
+        "checksum": "6541715f985b550d8176717aa9c64c3a369bdcd5b4e5b62a786bc72364c11bd3",
         "source_url": "https://www.sepe.es/SiteSepe/contenidos/que_es_el_sepe/estadisticas/datos_avance/xls/empleo/evolparo.xls; https://www.sepe.es/SiteSepe/contenidos/que_es_el_sepe/estadisticas/datos_avance/xls/empleo/evolprovsectores.xls"
       },
       {
         "source_id": "imserso_saad_extended",
         "ok": true,
-        "checked_at": "2026-07-24T22:16:28+02:00",
-        "message": "14 series; corte 2026-06-30; 20 territorios",
-        "checksum": "d7b000457831e38815c72682057067199064edeb88cd8134e6507e9d68973134",
-        "source_url": "https://imserso.es/documents/20123/11151734/estsisaad_20260630.xlsx/961e14cf-d41a-f0bd-dbc9-1737a325c37e"
+        "checked_at": "2026-08-15T09:56:46+02:00",
+        "message": "14 series; corte 2026-07-31; 20 territorios",
+        "checksum": "f2454564a4ccadc8adf946511c3aff9e379e1a6d398d6fbecb0db47aafa2ee63",
+        "source_url": "https://imserso.es/documents/20123/11151734/estsisaad_20260731.xlsx/c05d8583-3626-9116-bdef-5a4e81a64044"
       },
       {
         "source_id": "ine_tourist_dwellings",
         "ok": true,
-        "checked_at": "2026-07-24T22:16:30+02:00",
+        "checked_at": "2026-08-15T09:56:48+02:00",
         "message": "Serie hasta 2026M05; recuento y porcentaje para 20 territorios",
         "checksum": "a55c56d6e18ba8f0134067385e1803cb9c5a8fe874edbe4f656a91c4e36e9a46",
         "source_url": "https://www.ine.es/jaxiT3/files/t/es/csv_bd/46141.csv"
@@ -74,7 +74,7 @@
       {
         "source_id": "education_enrolment",
         "ok": true,
-        "checked_at": "2026-07-24T22:16:40+02:00",
+        "checked_at": "2026-08-15T09:56:58+02:00",
         "message": "18 series; 11546 observaciones; último curso 2024-25",
         "checksum": "9abfdc2c11d4486d5b9dde0773d8aaa79ccca6322e9518326905f0ae7d5f199c",
         "source_url": "https://www.educacionfpydeportes.gob.es/servicios-al-ciudadano/estadisticas/no-universitaria/alumnado/matriculado/series.html"
@@ -82,7 +82,7 @@
       {
         "source_id": "pensions",
         "ok": false,
-        "checked_at": "2026-07-24T22:16:41+02:00",
+        "checked_at": "2026-08-15T09:57:00+02:00",
         "message": "RuntimeError: No se localizó el fichero esperado en https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/est23/est24",
         "checksum": null,
         "source_url": null
@@ -90,7 +90,7 @@
       {
         "source_id": "imv",
         "ok": true,
-        "checked_at": "2026-07-24T22:16:54+02:00",
+        "checked_at": "2026-08-15T09:57:08+02:00",
         "message": "6 series; corte 2025-09; 20 territorios",
         "checksum": "eed619920952b0745fe85057b686f8afa1a0f05170291a4eb0943934abd51a48",
         "source_url": "https://www.inclusion.gob.es/documents/20121/0/202509++Dossier+CCAA+y+provincias.xlsx/902d4404-9d87-b413-42a0-eaf8586b720c?t=1759820962853"
@@ -98,7 +98,7 @@
       {
         "source_id": "health_waiting",
         "ok": true,
-        "checked_at": "2026-07-24T22:16:57+02:00",
+        "checked_at": "2026-08-15T09:57:10+02:00",
         "message": "14 series; corte 2025-12-31; 20 territorios en indicadores totales",
         "checksum": "a83c31ae645a86eab485d0f610c8e8dce9fb77bd3e79b3d29cbba8854155fbaf",
         "source_url": "https://www.sanidad.gob.es/estadEstudios/estadisticas/inforRecopilaciones/docs/Datos_ccaa_dic2025.pdf"
@@ -106,7 +106,7 @@
       {
         "source_id": "residences",
         "ok": true,
-        "checked_at": "2026-07-24T22:17:15+02:00",
+        "checked_at": "2026-08-15T09:57:26+02:00",
         "message": "12 series; año 2024; 20 territorios",
         "checksum": "c9931d2bea06ebaa08967f10aaf100e41f49b1c9c6743131da8ba1b9ebf09e58",
         "source_url": "https://imserso.es/documents/20123/10902543/inf_ssppmmesp2024.pdf/1432577e-5e36-5d7c-83d1-24864192dc99"
@@ -114,7 +114,7 @@
       {
         "source_id": "mivau_house_price",
         "ok": true,
-        "checked_at": "2026-07-24T22:17:23+02:00",
+        "checked_at": "2026-08-15T09:57:34+02:00",
         "message": "3 series; último trimestre 2026-Q1; 20 territorios",
         "checksum": "c214f190f26ee79c7eaf69b8ba35e7d558cf5b368fd726745d72a379798ab2b4",
         "source_url": "https://datos.gob.es/es/catalogo/e05233601-valor-tasado-de-la-vivienda"
@@ -122,7 +122,7 @@
       {
         "source_id": "pension_reserve",
         "ok": true,
-        "checked_at": "2026-07-24T22:17:23+02:00",
+        "checked_at": "2026-08-15T09:57:34+02:00",
         "message": "1 serie; último corte 2026-03; ámbito nacional",
         "checksum": "8377286f40e0026b47e83defa1fd1b9fc6b701da8d2a16ba7212c01864e8e177",
         "source_url": "https://revista.seg-social.es/-/el-fondo-de-reserva-de-la-seguridad-social-supera-los-15.200-millones-de-euros-en-abril"
@@ -130,7 +130,7 @@
       {
         "source_id": "university_system",
         "ok": true,
-        "checked_at": "2026-07-24T22:17:23+02:00",
+        "checked_at": "2026-08-15T09:57:34+02:00",
         "message": "27 series; curso 2024-25; cifras nacionales y autonómicas",
         "checksum": "5744895715d27e7b3ea9d7155976623229f350f69612f7fc4591b989ce2e3ed0",
         "source_url": "https://www.ciencia.gob.es/dam/jcr%3A747444d8-7089-4b15-97e1-0fc27874e6a7/DatosCifras_SUE2025_2026.pdf"
@@ -138,7 +138,7 @@
       {
         "source_id": "hospital_catalog",
         "ok": true,
-        "checked_at": "2026-07-24T22:17:24+02:00",
+        "checked_at": "2026-08-15T09:57:35+02:00",
         "message": "20 series; situación 2024-12-31; 848 hospitales identificados",
         "checksum": "052e3baa930011d59779a7b2b6f6d5fced3991c73b86c085271f09464cd1d146",
         "source_url": "https://www.sanidad.gob.es/estadEstudios/estadisticas/sisInfSanSNS/ofertaRecursos/hospitales/home.htm"
@@ -146,7 +146,7 @@
       {
         "source_id": "primary_care_catalog",
         "ok": true,
-        "checked_at": "2026-07-24T22:17:27+02:00",
+        "checked_at": "2026-08-15T09:57:38+02:00",
         "message": "15 series; situación 2025-12-31; 19 ámbitos territoriales",
         "checksum": "8f417625348cc698bfa42c154231febd36f80aa171dc09c9b4977188d94487fd",
         "source_url": "https://www.sanidad.gob.es/ciudadanos/prestaciones/centrosServiciosSNS/centrosSalud/home.htm"
@@ -6929,6 +6929,10 @@
             {
               "period": "2026T1",
               "value": 2708600
+            },
+            {
+              "period": "2026T2",
+              "value": 2495300
             }
           ]
         },
@@ -7323,6 +7327,10 @@
             {
               "period": "2026T1",
               "value": 621700
+            },
+            {
+              "period": "2026T2",
+              "value": 627100
             }
           ]
         },
@@ -7717,6 +7725,10 @@
             {
               "period": "2026T1",
               "value": 58300
+            },
+            {
+              "period": "2026T2",
+              "value": 57300
             }
           ]
         },
@@ -8111,6 +8123,10 @@
             {
               "period": "2026T1",
               "value": 42600
+            },
+            {
+              "period": "2026T2",
+              "value": 43500
             }
           ]
         },
@@ -8505,6 +8521,10 @@
             {
               "period": "2026T1",
               "value": 136500
+            },
+            {
+              "period": "2026T2",
+              "value": 135900
             }
           ]
         },
@@ -8899,6 +8919,10 @@
             {
               "period": "2026T1",
               "value": 21400
+            },
+            {
+              "period": "2026T2",
+              "value": 21300
             }
           ]
         },
@@ -9293,6 +9317,10 @@
             {
               "period": "2026T1",
               "value": 102400
+            },
+            {
+              "period": "2026T2",
+              "value": 96700
             }
           ]
         },
@@ -9687,6 +9715,10 @@
             {
               "period": "2026T1",
               "value": 139700
+            },
+            {
+              "period": "2026T2",
+              "value": 128800
             }
           ]
         },
@@ -10081,6 +10113,10 @@
             {
               "period": "2026T1",
               "value": 435600
+            },
+            {
+              "period": "2026T2",
+              "value": 343000
             }
           ]
         },
@@ -10475,6 +10511,10 @@
             {
               "period": "2026T1",
               "value": 11600
+            },
+            {
+              "period": "2026T2",
+              "value": 10600
             }
           ]
         },
@@ -10869,6 +10909,10 @@
             {
               "period": "2026T1",
               "value": 31000
+            },
+            {
+              "period": "2026T2",
+              "value": 27700
             }
           ]
         },
@@ -11263,6 +11307,10 @@
             {
               "period": "2026T1",
               "value": 306600
+            },
+            {
+              "period": "2026T2",
+              "value": 297900
             }
           ]
         },
@@ -11657,6 +11705,10 @@
             {
               "period": "2026T1",
               "value": 327800
+            },
+            {
+              "period": "2026T2",
+              "value": 304600
             }
           ]
         },
@@ -12051,6 +12103,10 @@
             {
               "period": "2026T1",
               "value": 65800
+            },
+            {
+              "period": "2026T2",
+              "value": 66300
             }
           ]
         },
@@ -12445,6 +12501,10 @@
             {
               "period": "2026T1",
               "value": 115900
+            },
+            {
+              "period": "2026T2",
+              "value": 101100
             }
           ]
         },
@@ -12839,6 +12899,10 @@
             {
               "period": "2026T1",
               "value": 91800
+            },
+            {
+              "period": "2026T2",
+              "value": 44400
             }
           ]
         },
@@ -13233,6 +13297,10 @@
             {
               "period": "2026T1",
               "value": 15700
+            },
+            {
+              "period": "2026T2",
+              "value": 14600
             }
           ]
         },
@@ -13627,6 +13695,10 @@
             {
               "period": "2026T1",
               "value": 7500
+            },
+            {
+              "period": "2026T2",
+              "value": 7300
             }
           ]
         },
@@ -14021,6 +14093,10 @@
             {
               "period": "2026T1",
               "value": 89600
+            },
+            {
+              "period": "2026T2",
+              "value": 77200
             }
           ]
         },
@@ -14415,6 +14491,10 @@
             {
               "period": "2026T1",
               "value": 87200
+            },
+            {
+              "period": "2026T2",
+              "value": 90200
             }
           ]
         }
@@ -14822,6 +14902,10 @@
             {
               "period": "2026T1",
               "value": 10.83
+            },
+            {
+              "period": "2026T2",
+              "value": 9.87
             }
           ]
         },
@@ -15216,6 +15300,10 @@
             {
               "period": "2026T1",
               "value": 14.66
+            },
+            {
+              "period": "2026T2",
+              "value": 14.56
             }
           ]
         },
@@ -15610,6 +15698,10 @@
             {
               "period": "2026T1",
               "value": 8.37
+            },
+            {
+              "period": "2026T2",
+              "value": 8.17
             }
           ]
         },
@@ -16004,6 +16096,10 @@
             {
               "period": "2026T1",
               "value": 9.02
+            },
+            {
+              "period": "2026T2",
+              "value": 9.12
             }
           ]
         },
@@ -16398,6 +16494,10 @@
             {
               "period": "2026T1",
               "value": 11.4
+            },
+            {
+              "period": "2026T2",
+              "value": 11.6
             }
           ]
         },
@@ -16792,6 +16892,10 @@
             {
               "period": "2026T1",
               "value": 7.49
+            },
+            {
+              "period": "2026T2",
+              "value": 7.34
             }
           ]
         },
@@ -17186,6 +17290,10 @@
             {
               "period": "2026T1",
               "value": 9.04
+            },
+            {
+              "period": "2026T2",
+              "value": 8.37
             }
           ]
         },
@@ -17580,6 +17688,10 @@
             {
               "period": "2026T1",
               "value": 12.97
+            },
+            {
+              "period": "2026T2",
+              "value": 11.81
             }
           ]
         },
@@ -17974,6 +18086,10 @@
             {
               "period": "2026T1",
               "value": 10.12
+            },
+            {
+              "period": "2026T2",
+              "value": 7.9
             }
           ]
         },
@@ -18368,6 +18484,10 @@
             {
               "period": "2026T1",
               "value": 26.1
+            },
+            {
+              "period": "2026T2",
+              "value": 22.41
             }
           ]
         },
@@ -18762,6 +18882,10 @@
             {
               "period": "2026T1",
               "value": 9.09
+            },
+            {
+              "period": "2026T2",
+              "value": 8.07
             }
           ]
         },
@@ -19156,6 +19280,10 @@
             {
               "period": "2026T1",
               "value": 7.91
+            },
+            {
+              "period": "2026T2",
+              "value": 7.58
             }
           ]
         },
@@ -19550,6 +19678,10 @@
             {
               "period": "2026T1",
               "value": 11.75
+            },
+            {
+              "period": "2026T2",
+              "value": 10.88
             }
           ]
         },
@@ -19944,6 +20076,10 @@
             {
               "period": "2026T1",
               "value": 13.25
+            },
+            {
+              "period": "2026T2",
+              "value": 13.22
             }
           ]
         },
@@ -20338,6 +20474,10 @@
             {
               "period": "2026T1",
               "value": 8.96
+            },
+            {
+              "period": "2026T2",
+              "value": 7.94
             }
           ]
         },
@@ -20732,6 +20872,10 @@
             {
               "period": "2026T1",
               "value": 13.79
+            },
+            {
+              "period": "2026T2",
+              "value": 6.11
             }
           ]
         },
@@ -21126,6 +21270,10 @@
             {
               "period": "2026T1",
               "value": 9.62
+            },
+            {
+              "period": "2026T2",
+              "value": 8.77
             }
           ]
         },
@@ -21520,6 +21668,10 @@
             {
               "period": "2026T1",
               "value": 21.42
+            },
+            {
+              "period": "2026T2",
+              "value": 20.74
             }
           ]
         },
@@ -21914,6 +22066,10 @@
             {
               "period": "2026T1",
               "value": 8.23
+            },
+            {
+              "period": "2026T2",
+              "value": 7.11
             }
           ]
         },
@@ -22308,6 +22464,10 @@
             {
               "period": "2026T1",
               "value": 10.84
+            },
+            {
+              "period": "2026T2",
+              "value": 10.83
             }
           ]
         }
@@ -22321,7 +22481,7 @@
       "unit": "afiliaciones medias",
       "frequency": "Mensual",
       "source": "Tesorería General de la Seguridad Social",
-      "source_url": "https://www.seg-social.es/wps/wcm/connect/wss/be59e035-5777-4cf8-96bc-f585ccbb6580/16_Informe+Mensual+Afiliados+CCAA-202606.pdf?MOD=AJPERES&CONVERT_TO=linktext&CACHEID=ROOTWORKSPACE.Z18_2G50H38209D640QTQ57OVB2000-be59e035-5777-4cf8-96bc-f585ccbb6580-pYxBTMJ",
+      "source_url": "https://www.seg-social.es/wps/wcm/connect/wss/be59e035-5777-4cf8-96bc-f585ccbb6580/16_Informe+Mensual+Afiliados+CCAA+202607.pdf?MOD=AJPERES&CONVERT_TO=linktext&CACHEID=ROOTWORKSPACE.Z18_81D21J401P5L40QTIT61G41000-be59e035-5777-4cf8-96bc-f585ccbb6580-p.byliU",
       "status": "Oficial",
       "decimals": 2,
       "territories": [
@@ -22330,16 +22490,16 @@
           "name": "España",
           "points": [
             {
-              "period": "2025-06",
-              "value": 21861095.0
-            },
-            {
-              "period": "2026-05",
-              "value": 22337805.95
+              "period": "2025-07",
+              "value": 21865503.09
             },
             {
               "period": "2026-06",
               "value": 22466338.86
+            },
+            {
+              "period": "2026-07",
+              "value": 22508065.43
             }
           ]
         },
@@ -22348,16 +22508,16 @@
           "name": "Andalucía",
           "points": [
             {
-              "period": "2025-06",
-              "value": 3509152.29
-            },
-            {
-              "period": "2026-05",
-              "value": 3619811.2
+              "period": "2025-07",
+              "value": 3492817.39
             },
             {
               "period": "2026-06",
               "value": 3605923.95
+            },
+            {
+              "period": "2026-07",
+              "value": 3598975.91
             }
           ]
         },
@@ -22366,16 +22526,16 @@
           "name": "Aragón",
           "points": [
             {
-              "period": "2025-06",
-              "value": 642231.43
-            },
-            {
-              "period": "2026-05",
-              "value": 651430.05
+              "period": "2025-07",
+              "value": 639974.48
             },
             {
               "period": "2026-06",
               "value": 658720.23
+            },
+            {
+              "period": "2026-07",
+              "value": 657457.35
             }
           ]
         },
@@ -22384,16 +22544,16 @@
           "name": "Asturias",
           "points": [
             {
-              "period": "2025-06",
-              "value": 393659.14
-            },
-            {
-              "period": "2026-05",
-              "value": 399421.15
+              "period": "2025-07",
+              "value": 398105.3
             },
             {
               "period": "2026-06",
-              "value": 402364.14
+              "value": 402364.13
+            },
+            {
+              "period": "2026-07",
+              "value": 406261.91
             }
           ]
         },
@@ -22402,16 +22562,16 @@
           "name": "Canarias",
           "points": [
             {
-              "period": "2025-06",
-              "value": 938227.29
-            },
-            {
-              "period": "2026-05",
-              "value": 963971.7
+              "period": "2025-07",
+              "value": 934115.09
             },
             {
               "period": "2026-06",
               "value": 964931.27
+            },
+            {
+              "period": "2026-07",
+              "value": 961638.43
             }
           ]
         },
@@ -22420,16 +22580,16 @@
           "name": "Cantabria",
           "points": [
             {
-              "period": "2025-06",
-              "value": 239537.48
-            },
-            {
-              "period": "2026-05",
-              "value": 240076.1
+              "period": "2025-07",
+              "value": 243925.48
             },
             {
               "period": "2026-06",
               "value": 242784.77
+            },
+            {
+              "period": "2026-07",
+              "value": 248580.04
             }
           ]
         },
@@ -22438,16 +22598,16 @@
           "name": "Castilla y León",
           "points": [
             {
-              "period": "2025-06",
-              "value": 998740.05
-            },
-            {
-              "period": "2026-05",
-              "value": 1006378.55
+              "period": "2025-07",
+              "value": 1004359.52
             },
             {
               "period": "2026-06",
               "value": 1016019.27
+            },
+            {
+              "period": "2026-07",
+              "value": 1022189.61
             }
           ]
         },
@@ -22456,16 +22616,16 @@
           "name": "Castilla-La Mancha",
           "points": [
             {
-              "period": "2025-06",
-              "value": 805868.43
-            },
-            {
-              "period": "2026-05",
-              "value": 814279.5
+              "period": "2025-07",
+              "value": 811635.43
             },
             {
               "period": "2026-06",
               "value": 826911.64
+            },
+            {
+              "period": "2026-07",
+              "value": 832598.09
             }
           ]
         },
@@ -22474,16 +22634,16 @@
           "name": "Cataluña",
           "points": [
             {
-              "period": "2025-06",
-              "value": 3905457.52
-            },
-            {
-              "period": "2026-05",
-              "value": 3971167.25
+              "period": "2025-07",
+              "value": 3912344.96
             },
             {
               "period": "2026-06",
               "value": 4008220.5
+            },
+            {
+              "period": "2026-07",
+              "value": 4024749.65
             }
           ]
         },
@@ -22492,16 +22652,16 @@
           "name": "Ceuta",
           "points": [
             {
-              "period": "2025-06",
-              "value": 24276.1
-            },
-            {
-              "period": "2026-05",
-              "value": 25235.8
+              "period": "2025-07",
+              "value": 24086.78
             },
             {
               "period": "2026-06",
-              "value": 25235.05
+              "value": 25235.04
+            },
+            {
+              "period": "2026-07",
+              "value": 25274.3
             }
           ]
         },
@@ -22510,16 +22670,16 @@
           "name": "Comunidad Foral de Navarra",
           "points": [
             {
-              "period": "2025-06",
-              "value": 316263.67
-            },
-            {
-              "period": "2026-05",
-              "value": 322358.1
+              "period": "2025-07",
+              "value": 315725.74
             },
             {
               "period": "2026-06",
               "value": 323243.36
+            },
+            {
+              "period": "2026-07",
+              "value": 323313.04
             }
           ]
         },
@@ -22528,16 +22688,16 @@
           "name": "Comunidad de Madrid",
           "points": [
             {
-              "period": "2025-06",
-              "value": 3801539.38
-            },
-            {
-              "period": "2026-05",
-              "value": 3920267.1
+              "period": "2025-07",
+              "value": 3776154.0
             },
             {
               "period": "2026-06",
               "value": 3934223.23
+            },
+            {
+              "period": "2026-07",
+              "value": 3908415.09
             }
           ]
         },
@@ -22546,16 +22706,16 @@
           "name": "Comunitat Valenciana",
           "points": [
             {
-              "period": "2025-06",
-              "value": 2220431.33
-            },
-            {
-              "period": "2026-05",
-              "value": 2294109.65
+              "period": "2025-07",
+              "value": 2227398.91
             },
             {
               "period": "2026-06",
               "value": 2306483.18
+            },
+            {
+              "period": "2026-07",
+              "value": 2318138.35
             }
           ]
         },
@@ -22564,16 +22724,16 @@
           "name": "Extremadura",
           "points": [
             {
-              "period": "2025-06",
-              "value": 422520.43
-            },
-            {
-              "period": "2026-05",
-              "value": 424301.75
+              "period": "2025-07",
+              "value": 425816.52
             },
             {
               "period": "2026-06",
               "value": 428945.23
+            },
+            {
+              "period": "2026-07",
+              "value": 431069.83
             }
           ]
         },
@@ -22582,16 +22742,16 @@
           "name": "Galicia",
           "points": [
             {
-              "period": "2025-06",
-              "value": 1102650.76
-            },
-            {
-              "period": "2026-05",
-              "value": 1111867.45
+              "period": "2025-07",
+              "value": 1113485.74
             },
             {
               "period": "2026-06",
               "value": 1123033.91
+            },
+            {
+              "period": "2026-07",
+              "value": 1135949.91
             }
           ]
         },
@@ -22600,16 +22760,16 @@
           "name": "Illes Balears",
           "points": [
             {
-              "period": "2025-06",
-              "value": 657981.05
-            },
-            {
-              "period": "2026-05",
-              "value": 653823.1
+              "period": "2025-07",
+              "value": 670559.7
             },
             {
               "period": "2026-06",
               "value": 678195.05
+            },
+            {
+              "period": "2026-07",
+              "value": 694037.7
             }
           ]
         },
@@ -22618,16 +22778,16 @@
           "name": "La Rioja",
           "points": [
             {
-              "period": "2025-06",
-              "value": 143044.19
-            },
-            {
-              "period": "2026-05",
-              "value": 146010.5
+              "period": "2025-07",
+              "value": 141785.7
             },
             {
               "period": "2026-06",
               "value": 145175.77
+            },
+            {
+              "period": "2026-07",
+              "value": 144193.78
             }
           ]
         },
@@ -22636,16 +22796,16 @@
           "name": "Melilla",
           "points": [
             {
-              "period": "2025-06",
-              "value": 25120.14
-            },
-            {
-              "period": "2026-05",
-              "value": 26403.65
+              "period": "2025-07",
+              "value": 25343.52
             },
             {
               "period": "2026-06",
               "value": 26314.41
+            },
+            {
+              "period": "2026-07",
+              "value": 26424.78
             }
           ]
         },
@@ -22654,16 +22814,16 @@
           "name": "País Vasco",
           "points": [
             {
-              "period": "2025-06",
-              "value": 1029145.43
-            },
-            {
-              "period": "2026-05",
-              "value": 1042680.35
+              "period": "2025-07",
+              "value": 1023299.3
             },
             {
               "period": "2026-06",
-              "value": 1044685.95
+              "value": 1044685.96
+            },
+            {
+              "period": "2026-07",
+              "value": 1042299.83
             }
           ]
         },
@@ -22672,16 +22832,16 @@
           "name": "Región de Murcia",
           "points": [
             {
-              "period": "2025-06",
-              "value": 685248.9
-            },
-            {
-              "period": "2026-05",
-              "value": 704213.0
+              "period": "2025-07",
+              "value": 684569.52
             },
             {
               "period": "2026-06",
-              "value": 704927.95
+              "value": 704927.96
+            },
+            {
+              "period": "2026-07",
+              "value": 706497.83
             }
           ]
         }
@@ -22773,6 +22933,10 @@
             {
               "period": "2026-06",
               "value": 2291982
+            },
+            {
+              "period": "2026-07",
+              "value": 2311499
             }
           ]
         },
@@ -22781,12 +22945,12 @@
           "name": "Andalucía",
           "points": [
             {
-              "period": "2026-05",
-              "value": 548120
-            },
-            {
               "period": "2026-06",
               "value": 536523
+            },
+            {
+              "period": "2026-07",
+              "value": 526862
             }
           ]
         },
@@ -22795,12 +22959,12 @@
           "name": "Aragón",
           "points": [
             {
-              "period": "2026-05",
-              "value": 47798
-            },
-            {
               "period": "2026-06",
               "value": 47840
+            },
+            {
+              "period": "2026-07",
+              "value": 49229
             }
           ]
         },
@@ -22809,12 +22973,12 @@
           "name": "Asturias",
           "points": [
             {
-              "period": "2026-05",
-              "value": 49320
-            },
-            {
               "period": "2026-06",
               "value": 48172
+            },
+            {
+              "period": "2026-07",
+              "value": 48304
             }
           ]
         },
@@ -22823,12 +22987,12 @@
           "name": "Canarias",
           "points": [
             {
-              "period": "2026-05",
-              "value": 144598
-            },
-            {
               "period": "2026-06",
               "value": 142409
+            },
+            {
+              "period": "2026-07",
+              "value": 144168
             }
           ]
         },
@@ -22837,12 +23001,12 @@
           "name": "Cantabria",
           "points": [
             {
-              "period": "2026-05",
-              "value": 27272
-            },
-            {
               "period": "2026-06",
               "value": 26605
+            },
+            {
+              "period": "2026-07",
+              "value": 26355
             }
           ]
         },
@@ -22851,12 +23015,12 @@
           "name": "Castilla y León",
           "points": [
             {
-              "period": "2026-05",
-              "value": 97155
-            },
-            {
               "period": "2026-06",
               "value": 94260
+            },
+            {
+              "period": "2026-07",
+              "value": 96313
             }
           ]
         },
@@ -22865,12 +23029,12 @@
           "name": "Castilla-La Mancha",
           "points": [
             {
-              "period": "2026-05",
-              "value": 115455
-            },
-            {
               "period": "2026-06",
               "value": 113853
+            },
+            {
+              "period": "2026-07",
+              "value": 114696
             }
           ]
         },
@@ -22879,12 +23043,12 @@
           "name": "Cataluña",
           "points": [
             {
-              "period": "2026-05",
-              "value": 307627
-            },
-            {
               "period": "2026-06",
               "value": 307169
+            },
+            {
+              "period": "2026-07",
+              "value": 314874
             }
           ]
         },
@@ -22893,12 +23057,12 @@
           "name": "Ceuta",
           "points": [
             {
-              "period": "2026-05",
-              "value": 8495
-            },
-            {
               "period": "2026-06",
               "value": 8518
+            },
+            {
+              "period": "2026-07",
+              "value": 8389
             }
           ]
         },
@@ -22907,12 +23071,12 @@
           "name": "Comunidad Foral de Navarra",
           "points": [
             {
-              "period": "2026-05",
-              "value": 28285
-            },
-            {
               "period": "2026-06",
               "value": 28309
+            },
+            {
+              "period": "2026-07",
+              "value": 28843
             }
           ]
         },
@@ -22921,12 +23085,12 @@
           "name": "Comunidad de Madrid",
           "points": [
             {
-              "period": "2026-05",
-              "value": 272542
-            },
-            {
               "period": "2026-06",
               "value": 269809
+            },
+            {
+              "period": "2026-07",
+              "value": 273631
             }
           ]
         },
@@ -22935,12 +23099,12 @@
           "name": "Comunitat Valenciana",
           "points": [
             {
-              "period": "2026-05",
-              "value": 284096
-            },
-            {
               "period": "2026-06",
               "value": 281651
+            },
+            {
+              "period": "2026-07",
+              "value": 288672
             }
           ]
         },
@@ -22949,12 +23113,12 @@
           "name": "Extremadura",
           "points": [
             {
-              "period": "2026-05",
-              "value": 61540
-            },
-            {
               "period": "2026-06",
               "value": 60535
+            },
+            {
+              "period": "2026-07",
+              "value": 59768
             }
           ]
         },
@@ -22963,12 +23127,12 @@
           "name": "Galicia",
           "points": [
             {
-              "period": "2026-05",
-              "value": 109355
-            },
-            {
               "period": "2026-06",
               "value": 105768
+            },
+            {
+              "period": "2026-07",
+              "value": 107322
             }
           ]
         },
@@ -22977,12 +23141,12 @@
           "name": "Illes Balears",
           "points": [
             {
-              "period": "2026-05",
-              "value": 23607
-            },
-            {
               "period": "2026-06",
               "value": 23707
+            },
+            {
+              "period": "2026-07",
+              "value": 24882
             }
           ]
         },
@@ -22991,12 +23155,12 @@
           "name": "La Rioja",
           "points": [
             {
-              "period": "2026-05",
-              "value": 11980
-            },
-            {
               "period": "2026-06",
               "value": 12027
+            },
+            {
+              "period": "2026-07",
+              "value": 12413
             }
           ]
         },
@@ -23005,12 +23169,12 @@
           "name": "Melilla",
           "points": [
             {
-              "period": "2026-05",
-              "value": 7242
-            },
-            {
               "period": "2026-06",
               "value": 7375
+            },
+            {
+              "period": "2026-07",
+              "value": 7200
             }
           ]
         },
@@ -23019,12 +23183,12 @@
           "name": "País Vasco",
           "points": [
             {
-              "period": "2026-05",
-              "value": 103733
-            },
-            {
               "period": "2026-06",
               "value": 104212
+            },
+            {
+              "period": "2026-07",
+              "value": 105590
             }
           ]
         },
@@ -23033,12 +23197,12 @@
           "name": "Región de Murcia",
           "points": [
             {
-              "period": "2026-05",
-              "value": 72501
-            },
-            {
               "period": "2026-06",
               "value": 73240
+            },
+            {
+              "period": "2026-07",
+              "value": 73988
             }
           ]
         }
@@ -24662,8 +24826,8 @@
               "value": 107327
             },
             {
-              "period": "2026-06-30",
-              "value": 112002
+              "period": "2026-07-31",
+              "value": 114918
             }
           ]
         },
@@ -24700,8 +24864,8 @@
               "value": 13300
             },
             {
-              "period": "2026-06-30",
-              "value": 11079
+              "period": "2026-07-31",
+              "value": 11021
             }
           ]
         },
@@ -24738,8 +24902,8 @@
               "value": 53
             },
             {
-              "period": "2026-06-30",
-              "value": 56
+              "period": "2026-07-31",
+              "value": 71
             }
           ]
         },
@@ -24776,8 +24940,8 @@
               "value": 379
             },
             {
-              "period": "2026-06-30",
-              "value": 516
+              "period": "2026-07-31",
+              "value": 527
             }
           ]
         },
@@ -24814,8 +24978,8 @@
               "value": 2427
             },
             {
-              "period": "2026-06-30",
-              "value": 376
+              "period": "2026-07-31",
+              "value": 389
             }
           ]
         },
@@ -24852,8 +25016,8 @@
               "value": 425
             },
             {
-              "period": "2026-06-30",
-              "value": 1425
+              "period": "2026-07-31",
+              "value": 1428
             }
           ]
         },
@@ -24890,8 +25054,8 @@
               "value": 151
             },
             {
-              "period": "2026-06-30",
-              "value": 207
+              "period": "2026-07-31",
+              "value": 200
             }
           ]
         },
@@ -24928,8 +25092,8 @@
               "value": 1924
             },
             {
-              "period": "2026-06-30",
-              "value": 3043
+              "period": "2026-07-31",
+              "value": 3185
             }
           ]
         },
@@ -24966,8 +25130,8 @@
               "value": 38335
             },
             {
-              "period": "2026-06-30",
-              "value": 39638
+              "period": "2026-07-31",
+              "value": 43516
             }
           ]
         },
@@ -25004,8 +25168,8 @@
               "value": 102
             },
             {
-              "period": "2026-06-30",
-              "value": 51
+              "period": "2026-07-31",
+              "value": 77
             }
           ]
         },
@@ -25042,8 +25206,8 @@
               "value": 609
             },
             {
-              "period": "2026-06-30",
-              "value": 453
+              "period": "2026-07-31",
+              "value": 448
             }
           ]
         },
@@ -25080,8 +25244,8 @@
               "value": 10056
             },
             {
-              "period": "2026-06-30",
-              "value": 13702
+              "period": "2026-07-31",
+              "value": 12127
             }
           ]
         },
@@ -25118,8 +25282,8 @@
               "value": 8677
             },
             {
-              "period": "2026-06-30",
-              "value": 9603
+              "period": "2026-07-31",
+              "value": 10558
             }
           ]
         },
@@ -25156,8 +25320,8 @@
               "value": 4838
             },
             {
-              "period": "2026-06-30",
-              "value": 5072
+              "period": "2026-07-31",
+              "value": 4951
             }
           ]
         },
@@ -25194,8 +25358,8 @@
               "value": 594
             },
             {
-              "period": "2026-06-30",
-              "value": 547
+              "period": "2026-07-31",
+              "value": 570
             }
           ]
         },
@@ -25232,8 +25396,8 @@
               "value": 3846
             },
             {
-              "period": "2026-06-30",
-              "value": 4239
+              "period": "2026-07-31",
+              "value": 4038
             }
           ]
         },
@@ -25270,8 +25434,8 @@
               "value": 809
             },
             {
-              "period": "2026-06-30",
-              "value": 941
+              "period": "2026-07-31",
+              "value": 967
             }
           ]
         },
@@ -25308,8 +25472,8 @@
               "value": 289
             },
             {
-              "period": "2026-06-30",
-              "value": 180
+              "period": "2026-07-31",
+              "value": 173
             }
           ]
         },
@@ -25346,8 +25510,8 @@
               "value": 13234
             },
             {
-              "period": "2026-06-30",
-              "value": 12958
+              "period": "2026-07-31",
+              "value": 12973
             }
           ]
         },
@@ -25384,8 +25548,8 @@
               "value": 7279
             },
             {
-              "period": "2026-06-30",
-              "value": 7916
+              "period": "2026-07-31",
+              "value": 7699
             }
           ]
         }
@@ -25435,8 +25599,8 @@
               "value": 1677042
             },
             {
-              "period": "2026-06-30",
-              "value": 1741857
+              "period": "2026-07-31",
+              "value": 1756692
             }
           ]
         },
@@ -25473,8 +25637,8 @@
               "value": 338932
             },
             {
-              "period": "2026-06-30",
-              "value": 355624
+              "period": "2026-07-31",
+              "value": 358621
             }
           ]
         },
@@ -25511,8 +25675,8 @@
               "value": 49312
             },
             {
-              "period": "2026-06-30",
-              "value": 51469
+              "period": "2026-07-31",
+              "value": 51639
             }
           ]
         },
@@ -25549,8 +25713,8 @@
               "value": 33772
             },
             {
-              "period": "2026-06-30",
-              "value": 34894
+              "period": "2026-07-31",
+              "value": 36078
             }
           ]
         },
@@ -25587,8 +25751,8 @@
               "value": 65832
             },
             {
-              "period": "2026-06-30",
-              "value": 75424
+              "period": "2026-07-31",
+              "value": 77018
             }
           ]
         },
@@ -25625,8 +25789,8 @@
               "value": 18132
             },
             {
-              "period": "2026-06-30",
-              "value": 19457
+              "period": "2026-07-31",
+              "value": 19351
             }
           ]
         },
@@ -25663,8 +25827,8 @@
               "value": 129176
             },
             {
-              "period": "2026-06-30",
-              "value": 128490
+              "period": "2026-07-31",
+              "value": 128805
             }
           ]
         },
@@ -25701,8 +25865,8 @@
               "value": 82425
             },
             {
-              "period": "2026-06-30",
-              "value": 82648
+              "period": "2026-07-31",
+              "value": 82675
             }
           ]
         },
@@ -25739,8 +25903,8 @@
               "value": 248373
             },
             {
-              "period": "2026-06-30",
-              "value": 259187
+              "period": "2026-07-31",
+              "value": 261818
             }
           ]
         },
@@ -25777,8 +25941,8 @@
               "value": 1681
             },
             {
-              "period": "2026-06-30",
-              "value": 1672
+              "period": "2026-07-31",
+              "value": 1668
             }
           ]
         },
@@ -25815,8 +25979,8 @@
               "value": 17562
             },
             {
-              "period": "2026-06-30",
-              "value": 17354
+              "period": "2026-07-31",
+              "value": 17254
             }
           ]
         },
@@ -25853,8 +26017,8 @@
               "value": 209961
             },
             {
-              "period": "2026-06-30",
-              "value": 222158
+              "period": "2026-07-31",
+              "value": 225211
             }
           ]
         },
@@ -25891,8 +26055,8 @@
               "value": 179408
             },
             {
-              "period": "2026-06-30",
-              "value": 184812
+              "period": "2026-07-31",
+              "value": 185871
             }
           ]
         },
@@ -25929,8 +26093,8 @@
               "value": 37664
             },
             {
-              "period": "2026-06-30",
-              "value": 37582
+              "period": "2026-07-31",
+              "value": 37627
             }
           ]
         },
@@ -25967,8 +26131,8 @@
               "value": 93660
             },
             {
-              "period": "2026-06-30",
-              "value": 97442
+              "period": "2026-07-31",
+              "value": 98062
             }
           ]
         },
@@ -26005,8 +26169,8 @@
               "value": 34208
             },
             {
-              "period": "2026-06-30",
-              "value": 34876
+              "period": "2026-07-31",
+              "value": 35374
             }
           ]
         },
@@ -26043,8 +26207,8 @@
               "value": 9620
             },
             {
-              "period": "2026-06-30",
-              "value": 9732
+              "period": "2026-07-31",
+              "value": 9786
             }
           ]
         },
@@ -26081,8 +26245,8 @@
               "value": 2235
             },
             {
-              "period": "2026-06-30",
-              "value": 2431
+              "period": "2026-07-31",
+              "value": 2435
             }
           ]
         },
@@ -26119,8 +26283,8 @@
               "value": 74802
             },
             {
-              "period": "2026-06-30",
-              "value": 75203
+              "period": "2026-07-31",
+              "value": 75104
             }
           ]
         },
@@ -26157,8 +26321,8 @@
               "value": 50287
             },
             {
-              "period": "2026-06-30",
-              "value": 51402
+              "period": "2026-07-31",
+              "value": 52295
             }
           ]
         }
@@ -77105,8 +77269,8 @@
           "name": "España",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 1707328
+              "period": "2026-07-31",
+              "value": 1720290
             }
           ]
         },
@@ -77115,8 +77279,8 @@
           "name": "Andalucía",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 344782
+              "period": "2026-07-31",
+              "value": 345635
             }
           ]
         },
@@ -77125,8 +77289,8 @@
           "name": "Aragón",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 50854
+              "period": "2026-07-31",
+              "value": 50984
             }
           ]
         },
@@ -77135,8 +77299,8 @@
           "name": "Asturias",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 34045
+              "period": "2026-07-31",
+              "value": 35178
             }
           ]
         },
@@ -77145,8 +77309,8 @@
           "name": "Canarias",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 61687
+              "period": "2026-07-31",
+              "value": 63510
             }
           ]
         },
@@ -77155,8 +77319,8 @@
           "name": "Cantabria",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 19456
+              "period": "2026-07-31",
+              "value": 19350
             }
           ]
         },
@@ -77165,8 +77329,8 @@
           "name": "Castilla y León",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 125429
+              "period": "2026-07-31",
+              "value": 125810
             }
           ]
         },
@@ -77175,8 +77339,8 @@
           "name": "Castilla-La Mancha",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 81232
+              "period": "2026-07-31",
+              "value": 81240
             }
           ]
         },
@@ -77185,8 +77349,8 @@
           "name": "Cataluña",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 259187
+              "period": "2026-07-31",
+              "value": 261818
             }
           ]
         },
@@ -77195,8 +77359,8 @@
           "name": "Ceuta",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 1672
+              "period": "2026-07-31",
+              "value": 1668
             }
           ]
         },
@@ -77205,8 +77369,8 @@
           "name": "Comunidad Foral de Navarra",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 17354
+              "period": "2026-07-31",
+              "value": 17254
             }
           ]
         },
@@ -77215,8 +77379,8 @@
           "name": "Comunidad de Madrid",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 222158
+              "period": "2026-07-31",
+              "value": 225211
             }
           ]
         },
@@ -77225,8 +77389,8 @@
           "name": "Comunitat Valenciana",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 182188
+              "period": "2026-07-31",
+              "value": 183305
             }
           ]
         },
@@ -77235,8 +77399,8 @@
           "name": "Extremadura",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 37431
+              "period": "2026-07-31",
+              "value": 37479
             }
           ]
         },
@@ -77245,8 +77409,8 @@
           "name": "Galicia",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 96662
+              "period": "2026-07-31",
+              "value": 97299
             }
           ]
         },
@@ -77255,8 +77419,8 @@
           "name": "Illes Balears",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 34876
+              "period": "2026-07-31",
+              "value": 35374
             }
           ]
         },
@@ -77265,8 +77429,8 @@
           "name": "La Rioja",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 9725
+              "period": "2026-07-31",
+              "value": 9783
             }
           ]
         },
@@ -77275,8 +77439,8 @@
           "name": "Melilla",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 2294
+              "period": "2026-07-31",
+              "value": 2288
             }
           ]
         },
@@ -77285,8 +77449,8 @@
           "name": "País Vasco",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 75203
+              "period": "2026-07-31",
+              "value": 75104
             }
           ]
         },
@@ -77295,8 +77459,8 @@
           "name": "Región de Murcia",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 51093
+              "period": "2026-07-31",
+              "value": 52000
             }
           ]
         }
@@ -77318,8 +77482,8 @@
           "name": "España",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 34529
+              "period": "2026-07-31",
+              "value": 36402
             }
           ]
         },
@@ -77328,8 +77492,8 @@
           "name": "Andalucía",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 10842
+              "period": "2026-07-31",
+              "value": 12986
             }
           ]
         },
@@ -77338,8 +77502,8 @@
           "name": "Aragón",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 615
+              "period": "2026-07-31",
+              "value": 655
             }
           ]
         },
@@ -77348,8 +77512,8 @@
           "name": "Asturias",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 849
+              "period": "2026-07-31",
+              "value": 900
             }
           ]
         },
@@ -77358,8 +77522,8 @@
           "name": "Canarias",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 13737
+              "period": "2026-07-31",
+              "value": 13508
             }
           ]
         },
@@ -77368,7 +77532,7 @@
           "name": "Cantabria",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 1
             }
           ]
@@ -77378,8 +77542,8 @@
           "name": "Castilla y León",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 3061
+              "period": "2026-07-31",
+              "value": 2995
             }
           ]
         },
@@ -77388,8 +77552,8 @@
           "name": "Castilla-La Mancha",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 1416
+              "period": "2026-07-31",
+              "value": 1435
             }
           ]
         },
@@ -77398,7 +77562,7 @@
           "name": "Cataluña",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 0
             }
           ]
@@ -77408,7 +77572,7 @@
           "name": "Ceuta",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 0
             }
           ]
@@ -77418,7 +77582,7 @@
           "name": "Comunidad Foral de Navarra",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 0
             }
           ]
@@ -77428,7 +77592,7 @@
           "name": "Comunidad de Madrid",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 0
             }
           ]
@@ -77438,8 +77602,8 @@
           "name": "Comunitat Valenciana",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 2624
+              "period": "2026-07-31",
+              "value": 2566
             }
           ]
         },
@@ -77448,8 +77612,8 @@
           "name": "Extremadura",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 151
+              "period": "2026-07-31",
+              "value": 148
             }
           ]
         },
@@ -77458,8 +77622,8 @@
           "name": "Galicia",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 780
+              "period": "2026-07-31",
+              "value": 763
             }
           ]
         },
@@ -77468,7 +77632,7 @@
           "name": "Illes Balears",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 0
             }
           ]
@@ -77478,8 +77642,8 @@
           "name": "La Rioja",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 7
+              "period": "2026-07-31",
+              "value": 3
             }
           ]
         },
@@ -77488,8 +77652,8 @@
           "name": "Melilla",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 137
+              "period": "2026-07-31",
+              "value": 147
             }
           ]
         },
@@ -77498,7 +77662,7 @@
           "name": "País Vasco",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 0
             }
           ]
@@ -77508,8 +77672,8 @@
           "name": "Región de Murcia",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 309
+              "period": "2026-07-31",
+              "value": 295
             }
           ]
         }
@@ -77559,8 +77723,8 @@
               "value": 1784369
             },
             {
-              "period": "2026-06-30",
-              "value": 1853859
+              "period": "2026-07-31",
+              "value": 1871610
             }
           ]
         },
@@ -77597,8 +77761,8 @@
               "value": 352232
             },
             {
-              "period": "2026-06-30",
-              "value": 366703
+              "period": "2026-07-31",
+              "value": 369642
             }
           ]
         },
@@ -77635,8 +77799,8 @@
               "value": 49365
             },
             {
-              "period": "2026-06-30",
-              "value": 51525
+              "period": "2026-07-31",
+              "value": 51710
             }
           ]
         },
@@ -77673,8 +77837,8 @@
               "value": 34151
             },
             {
-              "period": "2026-06-30",
-              "value": 35410
+              "period": "2026-07-31",
+              "value": 36605
             }
           ]
         },
@@ -77711,8 +77875,8 @@
               "value": 68259
             },
             {
-              "period": "2026-06-30",
-              "value": 75800
+              "period": "2026-07-31",
+              "value": 77407
             }
           ]
         },
@@ -77749,8 +77913,8 @@
               "value": 18557
             },
             {
-              "period": "2026-06-30",
-              "value": 20882
+              "period": "2026-07-31",
+              "value": 20779
             }
           ]
         },
@@ -77787,8 +77951,8 @@
               "value": 129327
             },
             {
-              "period": "2026-06-30",
-              "value": 128697
+              "period": "2026-07-31",
+              "value": 129005
             }
           ]
         },
@@ -77825,8 +77989,8 @@
               "value": 84349
             },
             {
-              "period": "2026-06-30",
-              "value": 85691
+              "period": "2026-07-31",
+              "value": 85860
             }
           ]
         },
@@ -77863,8 +78027,8 @@
               "value": 286708
             },
             {
-              "period": "2026-06-30",
-              "value": 298825
+              "period": "2026-07-31",
+              "value": 305334
             }
           ]
         },
@@ -77901,8 +78065,8 @@
               "value": 1783
             },
             {
-              "period": "2026-06-30",
-              "value": 1723
+              "period": "2026-07-31",
+              "value": 1745
             }
           ]
         },
@@ -77939,8 +78103,8 @@
               "value": 18171
             },
             {
-              "period": "2026-06-30",
-              "value": 17807
+              "period": "2026-07-31",
+              "value": 17702
             }
           ]
         },
@@ -77977,8 +78141,8 @@
               "value": 220017
             },
             {
-              "period": "2026-06-30",
-              "value": 235860
+              "period": "2026-07-31",
+              "value": 237338
             }
           ]
         },
@@ -78015,8 +78179,8 @@
               "value": 188085
             },
             {
-              "period": "2026-06-30",
-              "value": 194415
+              "period": "2026-07-31",
+              "value": 196429
             }
           ]
         },
@@ -78053,8 +78217,8 @@
               "value": 42502
             },
             {
-              "period": "2026-06-30",
-              "value": 42654
+              "period": "2026-07-31",
+              "value": 42578
             }
           ]
         },
@@ -78091,8 +78255,8 @@
               "value": 94254
             },
             {
-              "period": "2026-06-30",
-              "value": 97989
+              "period": "2026-07-31",
+              "value": 98632
             }
           ]
         },
@@ -78129,8 +78293,8 @@
               "value": 38054
             },
             {
-              "period": "2026-06-30",
-              "value": 39115
+              "period": "2026-07-31",
+              "value": 39412
             }
           ]
         },
@@ -78167,8 +78331,8 @@
               "value": 10429
             },
             {
-              "period": "2026-06-30",
-              "value": 10673
+              "period": "2026-07-31",
+              "value": 10753
             }
           ]
         },
@@ -78205,8 +78369,8 @@
               "value": 2524
             },
             {
-              "period": "2026-06-30",
-              "value": 2611
+              "period": "2026-07-31",
+              "value": 2608
             }
           ]
         },
@@ -78243,8 +78407,8 @@
               "value": 88036
             },
             {
-              "period": "2026-06-30",
-              "value": 88161
+              "period": "2026-07-31",
+              "value": 88077
             }
           ]
         },
@@ -78281,8 +78445,8 @@
               "value": 57566
             },
             {
-              "period": "2026-06-30",
-              "value": 59318
+              "period": "2026-07-31",
+              "value": 59994
             }
           ]
         }
@@ -78304,8 +78468,8 @@
           "name": "España",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 88910
+              "period": "2026-07-31",
+              "value": 89222
             }
           ]
         },
@@ -78314,8 +78478,8 @@
           "name": "Andalucía",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 10771
+              "period": "2026-07-31",
+              "value": 10705
             }
           ]
         },
@@ -78324,7 +78488,7 @@
           "name": "Aragón",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 8
             }
           ]
@@ -78334,8 +78498,8 @@
           "name": "Asturias",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 364
+              "period": "2026-07-31",
+              "value": 379
             }
           ]
         },
@@ -78344,8 +78508,8 @@
           "name": "Canarias",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 237
+              "period": "2026-07-31",
+              "value": 150
             }
           ]
         },
@@ -78354,8 +78518,8 @@
           "name": "Cantabria",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 69
+              "period": "2026-07-31",
+              "value": 97
             }
           ]
         },
@@ -78364,8 +78528,8 @@
           "name": "Castilla y León",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 0
+              "period": "2026-07-31",
+              "value": 1
             }
           ]
         },
@@ -78374,8 +78538,8 @@
           "name": "Castilla-La Mancha",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 1396
+              "period": "2026-07-31",
+              "value": 1520
             }
           ]
         },
@@ -78384,8 +78548,8 @@
           "name": "Cataluña",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 34638
+              "period": "2026-07-31",
+              "value": 35957
             }
           ]
         },
@@ -78394,8 +78558,8 @@
           "name": "Ceuta",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 29
+              "period": "2026-07-31",
+              "value": 28
             }
           ]
         },
@@ -78404,8 +78568,8 @@
           "name": "Comunidad Foral de Navarra",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 331
+              "period": "2026-07-31",
+              "value": 330
             }
           ]
         },
@@ -78414,8 +78578,8 @@
           "name": "Comunidad de Madrid",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 11416
+              "period": "2026-07-31",
+              "value": 10512
             }
           ]
         },
@@ -78424,8 +78588,8 @@
           "name": "Comunitat Valenciana",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 6350
+              "period": "2026-07-31",
+              "value": 6652
             }
           ]
         },
@@ -78434,8 +78598,8 @@
           "name": "Extremadura",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 3831
+              "period": "2026-07-31",
+              "value": 3686
             }
           ]
         },
@@ -78444,8 +78608,8 @@
           "name": "Galicia",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 504
+              "period": "2026-07-31",
+              "value": 509
             }
           ]
         },
@@ -78454,8 +78618,8 @@
           "name": "Illes Balears",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 2436
+              "period": "2026-07-31",
+              "value": 2258
             }
           ]
         },
@@ -78464,8 +78628,8 @@
           "name": "La Rioja",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 236
+              "period": "2026-07-31",
+              "value": 254
             }
           ]
         },
@@ -78474,7 +78638,7 @@
           "name": "Melilla",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 90
             }
           ]
@@ -78484,8 +78648,8 @@
           "name": "País Vasco",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 8650
+              "period": "2026-07-31",
+              "value": 8758
             }
           ]
         },
@@ -78494,8 +78658,8 @@
           "name": "Región de Murcia",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 7554
+              "period": "2026-07-31",
+              "value": 7328
             }
           ]
         }
@@ -78545,8 +78709,8 @@
               "value": 2391346
             },
             {
-              "period": "2026-06-30",
-              "value": 2520360
+              "period": "2026-07-31",
+              "value": 2545329
             }
           ]
         },
@@ -78583,8 +78747,8 @@
               "value": 523381
             },
             {
-              "period": "2026-06-30",
-              "value": 558741
+              "period": "2026-07-31",
+              "value": 564395
             }
           ]
         },
@@ -78621,8 +78785,8 @@
               "value": 65157
             },
             {
-              "period": "2026-06-30",
-              "value": 68333
+              "period": "2026-07-31",
+              "value": 68516
             }
           ]
         },
@@ -78659,8 +78823,8 @@
               "value": 48068
             },
             {
-              "period": "2026-06-30",
-              "value": 50308
+              "period": "2026-07-31",
+              "value": 52310
             }
           ]
         },
@@ -78697,8 +78861,8 @@
               "value": 75402
             },
             {
-              "period": "2026-06-30",
-              "value": 98252
+              "period": "2026-07-31",
+              "value": 101221
             }
           ]
         },
@@ -78735,8 +78899,8 @@
               "value": 28934
             },
             {
-              "period": "2026-06-30",
-              "value": 30782
+              "period": "2026-07-31",
+              "value": 30603
             }
           ]
         },
@@ -78773,8 +78937,8 @@
               "value": 183946
             },
             {
-              "period": "2026-06-30",
-              "value": 181928
+              "period": "2026-07-31",
+              "value": 182292
             }
           ]
         },
@@ -78811,8 +78975,8 @@
               "value": 118432
             },
             {
-              "period": "2026-06-30",
-              "value": 123110
+              "period": "2026-07-31",
+              "value": 123558
             }
           ]
         },
@@ -78849,8 +79013,8 @@
               "value": 308066
             },
             {
-              "period": "2026-06-30",
-              "value": 322033
+              "period": "2026-07-31",
+              "value": 325594
             }
           ]
         },
@@ -78887,8 +79051,8 @@
               "value": 1813
             },
             {
-              "period": "2026-06-30",
-              "value": 1792
+              "period": "2026-07-31",
+              "value": 1787
             }
           ]
         },
@@ -78925,8 +79089,8 @@
               "value": 25127
             },
             {
-              "period": "2026-06-30",
-              "value": 25091
+              "period": "2026-07-31",
+              "value": 24997
             }
           ]
         },
@@ -78963,8 +79127,8 @@
               "value": 298974
             },
             {
-              "period": "2026-06-30",
-              "value": 322017
+              "period": "2026-07-31",
+              "value": 326651
             }
           ]
         },
@@ -79001,8 +79165,8 @@
               "value": 271458
             },
             {
-              "period": "2026-06-30",
-              "value": 277754
+              "period": "2026-07-31",
+              "value": 279081
             }
           ]
         },
@@ -79039,8 +79203,8 @@
               "value": 44892
             },
             {
-              "period": "2026-06-30",
-              "value": 44754
+              "period": "2026-07-31",
+              "value": 45055
             }
           ]
         },
@@ -79077,8 +79241,8 @@
               "value": 148176
             },
             {
-              "period": "2026-06-30",
-              "value": 160372
+              "period": "2026-07-31",
+              "value": 162272
             }
           ]
         },
@@ -79115,8 +79279,8 @@
               "value": 56738
             },
             {
-              "period": "2026-06-30",
-              "value": 58896
+              "period": "2026-07-31",
+              "value": 59929
             }
           ]
         },
@@ -79153,8 +79317,8 @@
               "value": 14917
             },
             {
-              "period": "2026-06-30",
-              "value": 14526
+              "period": "2026-07-31",
+              "value": 14587
             }
           ]
         },
@@ -79191,8 +79355,8 @@
               "value": 3430
             },
             {
-              "period": "2026-06-30",
-              "value": 3775
+              "period": "2026-07-31",
+              "value": 3783
             }
           ]
         },
@@ -79229,8 +79393,8 @@
               "value": 107665
             },
             {
-              "period": "2026-06-30",
-              "value": 109152
+              "period": "2026-07-31",
+              "value": 109057
             }
           ]
         },
@@ -79267,8 +79431,8 @@
               "value": 66770
             },
             {
-              "period": "2026-06-30",
-              "value": 68744
+              "period": "2026-07-31",
+              "value": 69641
             }
           ]
         }
@@ -79318,8 +79482,8 @@
               "value": 2217055
             },
             {
-              "period": "2026-06-30",
-              "value": 2283334
+              "period": "2026-07-31",
+              "value": 2304208
             }
           ]
         },
@@ -79356,8 +79520,8 @@
               "value": 441462
             },
             {
-              "period": "2026-06-30",
-              "value": 450182
+              "period": "2026-07-31",
+              "value": 453755
             }
           ]
         },
@@ -79394,8 +79558,8 @@
               "value": 57328
             },
             {
-              "period": "2026-06-30",
-              "value": 59360
+              "period": "2026-07-31",
+              "value": 59571
             }
           ]
         },
@@ -79432,8 +79596,8 @@
               "value": 43625
             },
             {
-              "period": "2026-06-30",
-              "value": 44389
+              "period": "2026-07-31",
+              "value": 45374
             }
           ]
         },
@@ -79470,8 +79634,8 @@
               "value": 76771
             },
             {
-              "period": "2026-06-30",
-              "value": 84811
+              "period": "2026-07-31",
+              "value": 86622
             }
           ]
         },
@@ -79508,8 +79672,8 @@
               "value": 23336
             },
             {
-              "period": "2026-06-30",
-              "value": 25562
+              "period": "2026-07-31",
+              "value": 25434
             }
           ]
         },
@@ -79546,8 +79710,8 @@
               "value": 160029
             },
             {
-              "period": "2026-06-30",
-              "value": 158131
+              "period": "2026-07-31",
+              "value": 158252
             }
           ]
         },
@@ -79584,8 +79748,8 @@
               "value": 101470
             },
             {
-              "period": "2026-06-30",
-              "value": 102187
+              "period": "2026-07-31",
+              "value": 102347
             }
           ]
         },
@@ -79622,8 +79786,8 @@
               "value": 376007
             },
             {
-              "period": "2026-06-30",
-              "value": 392779
+              "period": "2026-07-31",
+              "value": 400729
             }
           ]
         },
@@ -79660,8 +79824,8 @@
               "value": 2534
             },
             {
-              "period": "2026-06-30",
-              "value": 2485
+              "period": "2026-07-31",
+              "value": 2510
             }
           ]
         },
@@ -79698,8 +79862,8 @@
               "value": 24116
             },
             {
-              "period": "2026-06-30",
-              "value": 24208
+              "period": "2026-07-31",
+              "value": 24165
             }
           ]
         },
@@ -79736,8 +79900,8 @@
               "value": 277650
             },
             {
-              "period": "2026-06-30",
-              "value": 290810
+              "period": "2026-07-31",
+              "value": 292737
             }
           ]
         },
@@ -79774,8 +79938,8 @@
               "value": 219095
             },
             {
-              "period": "2026-06-30",
-              "value": 226065
+              "period": "2026-07-31",
+              "value": 228259
             }
           ]
         },
@@ -79812,8 +79976,8 @@
               "value": 58757
             },
             {
-              "period": "2026-06-30",
-              "value": 58814
+              "period": "2026-07-31",
+              "value": 58745
             }
           ]
         },
@@ -79850,8 +80014,8 @@
               "value": 100376
             },
             {
-              "period": "2026-06-30",
-              "value": 103546
+              "period": "2026-07-31",
+              "value": 104164
             }
           ]
         },
@@ -79888,8 +80052,8 @@
               "value": 47585
             },
             {
-              "period": "2026-06-30",
-              "value": 49148
+              "period": "2026-07-31",
+              "value": 49560
             }
           ]
         },
@@ -79926,8 +80090,8 @@
               "value": 14968
             },
             {
-              "period": "2026-06-30",
-              "value": 15303
+              "period": "2026-07-31",
+              "value": 15391
             }
           ]
         },
@@ -79964,8 +80128,8 @@
               "value": 3241
             },
             {
-              "period": "2026-06-30",
-              "value": 3332
+              "period": "2026-07-31",
+              "value": 3328
             }
           ]
         },
@@ -80002,8 +80166,8 @@
               "value": 121567
             },
             {
-              "period": "2026-06-30",
-              "value": 122083
+              "period": "2026-07-31",
+              "value": 122136
             }
           ]
         },
@@ -80040,8 +80204,8 @@
               "value": 67138
             },
             {
-              "period": "2026-06-30",
-              "value": 70139
+              "period": "2026-07-31",
+              "value": 71129
             }
           ]
         }
@@ -80063,8 +80227,8 @@
           "name": "España",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 48228
+              "period": "2026-07-31",
+              "value": 42411
             }
           ]
         },
@@ -80073,8 +80237,8 @@
           "name": "Andalucía",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 17875
+              "period": "2026-07-31",
+              "value": 17104
             }
           ]
         },
@@ -80083,8 +80247,8 @@
           "name": "Aragón",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 126
+              "period": "2026-07-31",
+              "value": 141
             }
           ]
         },
@@ -80093,8 +80257,8 @@
           "name": "Asturias",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 5913
+              "period": "2026-07-31",
+              "value": 5059
             }
           ]
         },
@@ -80103,8 +80267,8 @@
           "name": "Canarias",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 169
+              "period": "2026-07-31",
+              "value": 315
             }
           ]
         },
@@ -80113,8 +80277,8 @@
           "name": "Cantabria",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 70
+              "period": "2026-07-31",
+              "value": 74
             }
           ]
         },
@@ -80123,7 +80287,7 @@
           "name": "Castilla y León",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 2
             }
           ]
@@ -80133,8 +80297,8 @@
           "name": "Castilla-La Mancha",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 508
+              "period": "2026-07-31",
+              "value": 467
             }
           ]
         },
@@ -80143,8 +80307,8 @@
           "name": "Cataluña",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 10959
+              "period": "2026-07-31",
+              "value": 8334
             }
           ]
         },
@@ -80153,7 +80317,7 @@
           "name": "Ceuta",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 20
             }
           ]
@@ -80163,7 +80327,7 @@
           "name": "Comunidad Foral de Navarra",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 85
             }
           ]
@@ -80173,8 +80337,8 @@
           "name": "Comunidad de Madrid",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 259
+              "period": "2026-07-31",
+              "value": 77
             }
           ]
         },
@@ -80183,8 +80347,8 @@
           "name": "Comunitat Valenciana",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 8673
+              "period": "2026-07-31",
+              "value": 7871
             }
           ]
         },
@@ -80193,8 +80357,8 @@
           "name": "Extremadura",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 716
+              "period": "2026-07-31",
+              "value": 683
             }
           ]
         },
@@ -80203,8 +80367,8 @@
           "name": "Galicia",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 28
+              "period": "2026-07-31",
+              "value": 19
             }
           ]
         },
@@ -80213,8 +80377,8 @@
           "name": "Illes Balears",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 134
+              "period": "2026-07-31",
+              "value": 117
             }
           ]
         },
@@ -80223,8 +80387,8 @@
           "name": "La Rioja",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 5
+              "period": "2026-07-31",
+              "value": 6
             }
           ]
         },
@@ -80233,7 +80397,7 @@
           "name": "Melilla",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 14
             }
           ]
@@ -80243,8 +80407,8 @@
           "name": "País Vasco",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 138
+              "period": "2026-07-31",
+              "value": 136
             }
           ]
         },
@@ -80253,8 +80417,8 @@
           "name": "Región de Murcia",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 2534
+              "period": "2026-07-31",
+              "value": 1887
             }
           ]
         }
@@ -80276,8 +80440,8 @@
           "name": "España",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 108908
+              "period": "2026-07-31",
+              "value": 101757
             }
           ]
         },
@@ -80286,8 +80450,8 @@
           "name": "Andalucía",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 19786
+              "period": "2026-07-31",
+              "value": 18075
             }
           ]
         },
@@ -80296,8 +80460,8 @@
           "name": "Aragón",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 3820
+              "period": "2026-07-31",
+              "value": 3848
             }
           ]
         },
@@ -80306,8 +80470,8 @@
           "name": "Asturias",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 6437
+              "period": "2026-07-31",
+              "value": 5488
             }
           ]
         },
@@ -80316,8 +80480,8 @@
           "name": "Canarias",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 1689
+              "period": "2026-07-31",
+              "value": 2132
             }
           ]
         },
@@ -80326,8 +80490,8 @@
           "name": "Cantabria",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 400
+              "period": "2026-07-31",
+              "value": 489
             }
           ]
         },
@@ -80336,8 +80500,8 @@
           "name": "Castilla y León",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 3548
+              "period": "2026-07-31",
+              "value": 3630
             }
           ]
         },
@@ -80346,8 +80510,8 @@
           "name": "Castilla-La Mancha",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 3095
+              "period": "2026-07-31",
+              "value": 3557
             }
           ]
         },
@@ -80356,8 +80520,8 @@
           "name": "Cataluña",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 38688
+              "period": "2026-07-31",
+              "value": 33803
             }
           ]
         },
@@ -80366,8 +80530,8 @@
           "name": "Ceuta",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 49
+              "period": "2026-07-31",
+              "value": 40
             }
           ]
         },
@@ -80376,8 +80540,8 @@
           "name": "Comunidad Foral de Navarra",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 87
+              "period": "2026-07-31",
+              "value": 88
             }
           ]
         },
@@ -80386,8 +80550,8 @@
           "name": "Comunidad de Madrid",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 732
+              "period": "2026-07-31",
+              "value": 126
             }
           ]
         },
@@ -80396,8 +80560,8 @@
           "name": "Comunitat Valenciana",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 19507
+              "period": "2026-07-31",
+              "value": 20308
             }
           ]
         },
@@ -80406,8 +80570,8 @@
           "name": "Extremadura",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 3377
+              "period": "2026-07-31",
+              "value": 3266
             }
           ]
         },
@@ -80416,8 +80580,8 @@
           "name": "Galicia",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 32
+              "period": "2026-07-31",
+              "value": 19
             }
           ]
         },
@@ -80426,8 +80590,8 @@
           "name": "Illes Balears",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 1534
+              "period": "2026-07-31",
+              "value": 1491
             }
           ]
         },
@@ -80436,7 +80600,7 @@
           "name": "La Rioja",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 8
             }
           ]
@@ -80446,8 +80610,8 @@
           "name": "Melilla",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 65
+              "period": "2026-07-31",
+              "value": 63
             }
           ]
         },
@@ -80456,8 +80620,8 @@
           "name": "País Vasco",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 147
+              "period": "2026-07-31",
+              "value": 145
             }
           ]
         },
@@ -80466,8 +80630,8 @@
           "name": "Región de Murcia",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 5907
+              "period": "2026-07-31",
+              "value": 5181
             }
           ]
         }
@@ -80517,8 +80681,8 @@
               "value": 2326315
             },
             {
-              "period": "2026-06-30",
-              "value": 2392242
+              "period": "2026-07-31",
+              "value": 2405965
             }
           ]
         },
@@ -80555,8 +80719,8 @@
               "value": 456133
             },
             {
-              "period": "2026-06-30",
-              "value": 469968
+              "period": "2026-07-31",
+              "value": 471830
             }
           ]
         },
@@ -80593,8 +80757,8 @@
               "value": 61425
             },
             {
-              "period": "2026-06-30",
-              "value": 63180
+              "period": "2026-07-31",
+              "value": 63419
             }
           ]
         },
@@ -80631,8 +80795,8 @@
               "value": 50073
             },
             {
-              "period": "2026-06-30",
-              "value": 50826
+              "period": "2026-07-31",
+              "value": 50862
             }
           ]
         },
@@ -80669,8 +80833,8 @@
               "value": 79243
             },
             {
-              "period": "2026-06-30",
-              "value": 86500
+              "period": "2026-07-31",
+              "value": 88754
             }
           ]
         },
@@ -80707,8 +80871,8 @@
               "value": 23795
             },
             {
-              "period": "2026-06-30",
-              "value": 25962
+              "period": "2026-07-31",
+              "value": 25923
             }
           ]
         },
@@ -80745,8 +80909,8 @@
               "value": 162682
             },
             {
-              "period": "2026-06-30",
-              "value": 161679
+              "period": "2026-07-31",
+              "value": 161882
             }
           ]
         },
@@ -80783,8 +80947,8 @@
               "value": 104062
             },
             {
-              "period": "2026-06-30",
-              "value": 105282
+              "period": "2026-07-31",
+              "value": 105904
             }
           ]
         },
@@ -80821,8 +80985,8 @@
               "value": 419673
             },
             {
-              "period": "2026-06-30",
-              "value": 431467
+              "period": "2026-07-31",
+              "value": 434532
             }
           ]
         },
@@ -80859,8 +81023,8 @@
               "value": 2573
             },
             {
-              "period": "2026-06-30",
-              "value": 2534
+              "period": "2026-07-31",
+              "value": 2550
             }
           ]
         },
@@ -80897,8 +81061,8 @@
               "value": 24200
             },
             {
-              "period": "2026-06-30",
-              "value": 24295
+              "period": "2026-07-31",
+              "value": 24253
             }
           ]
         },
@@ -80935,8 +81099,8 @@
               "value": 277807
             },
             {
-              "period": "2026-06-30",
-              "value": 291542
+              "period": "2026-07-31",
+              "value": 292863
             }
           ]
         },
@@ -80973,8 +81137,8 @@
               "value": 236730
             },
             {
-              "period": "2026-06-30",
-              "value": 245572
+              "period": "2026-07-31",
+              "value": 248567
             }
           ]
         },
@@ -81011,8 +81175,8 @@
               "value": 62130
             },
             {
-              "period": "2026-06-30",
-              "value": 62191
+              "period": "2026-07-31",
+              "value": 62011
             }
           ]
         },
@@ -81049,8 +81213,8 @@
               "value": 100525
             },
             {
-              "period": "2026-06-30",
-              "value": 103578
+              "period": "2026-07-31",
+              "value": 104183
             }
           ]
         },
@@ -81087,8 +81251,8 @@
               "value": 50646
             },
             {
-              "period": "2026-06-30",
-              "value": 50682
+              "period": "2026-07-31",
+              "value": 51051
             }
           ]
         },
@@ -81125,8 +81289,8 @@
               "value": 14974
             },
             {
-              "period": "2026-06-30",
-              "value": 15311
+              "period": "2026-07-31",
+              "value": 15399
             }
           ]
         },
@@ -81163,8 +81327,8 @@
               "value": 3340
             },
             {
-              "period": "2026-06-30",
-              "value": 3397
+              "period": "2026-07-31",
+              "value": 3391
             }
           ]
         },
@@ -81201,8 +81365,8 @@
               "value": 121716
             },
             {
-              "period": "2026-06-30",
-              "value": 122230
+              "period": "2026-07-31",
+              "value": 122281
             }
           ]
         },
@@ -81239,8 +81403,8 @@
               "value": 74588
             },
             {
-              "period": "2026-06-30",
-              "value": 76046
+              "period": "2026-07-31",
+              "value": 76310
             }
           ]
         }
@@ -81262,8 +81426,8 @@
           "name": "España",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 56
+              "period": "2026-07-31",
+              "value": 54
             }
           ]
         },
@@ -81272,8 +81436,8 @@
           "name": "Andalucía",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 21
+              "period": "2026-07-31",
+              "value": 18
             }
           ]
         },
@@ -81282,7 +81446,7 @@
           "name": "Aragón",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 22
             }
           ]
@@ -81292,8 +81456,8 @@
           "name": "Asturias",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 120
+              "period": "2026-07-31",
+              "value": 121
             }
           ]
         },
@@ -81302,8 +81466,8 @@
           "name": "Canarias",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 77
+              "period": "2026-07-31",
+              "value": 68
             }
           ]
         },
@@ -81312,8 +81476,8 @@
           "name": "Cantabria",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 44
+              "period": "2026-07-31",
+              "value": 46
             }
           ]
         },
@@ -81322,7 +81486,7 @@
           "name": "Castilla y León",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 0
             }
           ]
@@ -81332,8 +81496,8 @@
           "name": "Castilla-La Mancha",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 55
+              "period": "2026-07-31",
+              "value": 53
             }
           ]
         },
@@ -81342,8 +81506,8 @@
           "name": "Cataluña",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 60
+              "period": "2026-07-31",
+              "value": 58
             }
           ]
         },
@@ -81352,7 +81516,7 @@
           "name": "Ceuta",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 49
             }
           ]
@@ -81362,8 +81526,8 @@
           "name": "Comunidad Foral de Navarra",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 83
+              "period": "2026-07-31",
+              "value": 85
             }
           ]
         },
@@ -81372,7 +81536,7 @@
           "name": "Comunidad de Madrid",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 51
             }
           ]
@@ -81382,7 +81546,7 @@
           "name": "Comunitat Valenciana",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 41
             }
           ]
@@ -81392,8 +81556,8 @@
           "name": "Extremadura",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 112
+              "period": "2026-07-31",
+              "value": 115
             }
           ]
         },
@@ -81402,8 +81566,8 @@
           "name": "Galicia",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 141
+              "period": "2026-07-31",
+              "value": 139
             }
           ]
         },
@@ -81412,8 +81576,8 @@
           "name": "Illes Balears",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 93
+              "period": "2026-07-31",
+              "value": 92
             }
           ]
         },
@@ -81422,8 +81586,8 @@
           "name": "La Rioja",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 77
+              "period": "2026-07-31",
+              "value": 75
             }
           ]
         },
@@ -81432,8 +81596,8 @@
           "name": "Melilla",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 95
+              "period": "2026-07-31",
+              "value": 92
             }
           ]
         },
@@ -81442,7 +81606,7 @@
           "name": "País Vasco",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 46
             }
           ]
@@ -81452,8 +81616,8 @@
           "name": "Región de Murcia",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 210
+              "period": "2026-07-31",
+              "value": 208
             }
           ]
         }
@@ -81475,8 +81639,8 @@
           "name": "España",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 236
+              "period": "2026-07-31",
+              "value": 232
             }
           ]
         },
@@ -81485,8 +81649,8 @@
           "name": "Andalucía",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 393
+              "period": "2026-07-31",
+              "value": 384
             }
           ]
         },
@@ -81495,8 +81659,8 @@
           "name": "Aragón",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 92
+              "period": "2026-07-31",
+              "value": 91
             }
           ]
         },
@@ -81505,8 +81669,8 @@
           "name": "Asturias",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 305
+              "period": "2026-07-31",
+              "value": 302
             }
           ]
         },
@@ -81515,8 +81679,8 @@
           "name": "Canarias",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 179
+              "period": "2026-07-31",
+              "value": 166
             }
           ]
         },
@@ -81525,8 +81689,8 @@
           "name": "Cantabria",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 128
+              "period": "2026-07-31",
+              "value": 125
             }
           ]
         },
@@ -81535,8 +81699,8 @@
           "name": "Castilla y León",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 117
+              "period": "2026-07-31",
+              "value": 118
             }
           ]
         },
@@ -81545,8 +81709,8 @@
           "name": "Castilla-La Mancha",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 110
+              "period": "2026-07-31",
+              "value": 111
             }
           ]
         },
@@ -81555,8 +81719,8 @@
           "name": "Cataluña",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 211
+              "period": "2026-07-31",
+              "value": 208
             }
           ]
         },
@@ -81565,8 +81729,8 @@
           "name": "Ceuta",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 34
+              "period": "2026-07-31",
+              "value": 32
             }
           ]
         },
@@ -81575,8 +81739,8 @@
           "name": "Comunidad Foral de Navarra",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 142
+              "period": "2026-07-31",
+              "value": 143
             }
           ]
         },
@@ -81585,8 +81749,8 @@
           "name": "Comunidad de Madrid",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 215
+              "period": "2026-07-31",
+              "value": 213
             }
           ]
         },
@@ -81595,8 +81759,8 @@
           "name": "Comunitat Valenciana",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 257
+              "period": "2026-07-31",
+              "value": 255
             }
           ]
         },
@@ -81605,8 +81769,8 @@
           "name": "Extremadura",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 158
+              "period": "2026-07-31",
+              "value": 157
             }
           ]
         },
@@ -81615,8 +81779,8 @@
           "name": "Galicia",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 178
+              "period": "2026-07-31",
+              "value": 182
             }
           ]
         },
@@ -81625,8 +81789,8 @@
           "name": "Illes Balears",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 101
+              "period": "2026-07-31",
+              "value": 97
             }
           ]
         },
@@ -81635,8 +81799,8 @@
           "name": "La Rioja",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 75
+              "period": "2026-07-31",
+              "value": 74
             }
           ]
         },
@@ -81645,8 +81809,8 @@
           "name": "Melilla",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 86
+              "period": "2026-07-31",
+              "value": 84
             }
           ]
         },
@@ -81655,8 +81819,8 @@
           "name": "País Vasco",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 82
+              "period": "2026-07-31",
+              "value": 81
             }
           ]
         },
@@ -81665,8 +81829,8 @@
           "name": "Región de Murcia",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 311
+              "period": "2026-07-31",
+              "value": 299
             }
           ]
         }
@@ -81688,8 +81852,8 @@
           "name": "España",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 314
+              "period": "2026-07-31",
+              "value": 309
             }
           ]
         },
@@ -81698,8 +81862,8 @@
           "name": "Andalucía",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 435
+              "period": "2026-07-31",
+              "value": 424
             }
           ]
         },
@@ -81708,8 +81872,8 @@
           "name": "Aragón",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 117
+              "period": "2026-07-31",
+              "value": 114
             }
           ]
         },
@@ -81718,8 +81882,8 @@
           "name": "Asturias",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 425
+              "period": "2026-07-31",
+              "value": 421
             }
           ]
         },
@@ -81728,8 +81892,8 @@
           "name": "Canarias",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 314
+              "period": "2026-07-31",
+              "value": 283
             }
           ]
         },
@@ -81738,7 +81902,7 @@
           "name": "Cantabria",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 172
             }
           ]
@@ -81748,7 +81912,7 @@
           "name": "Castilla y León",
           "points": [
             {
-              "period": "2026-06-30",
+              "period": "2026-07-31",
               "value": 120
             }
           ]
@@ -81758,8 +81922,8 @@
           "name": "Castilla-La Mancha",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 166
+              "period": "2026-07-31",
+              "value": 165
             }
           ]
         },
@@ -81768,8 +81932,8 @@
           "name": "Cataluña",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 267
+              "period": "2026-07-31",
+              "value": 266
             }
           ]
         },
@@ -81778,8 +81942,8 @@
           "name": "Ceuta",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 82
+              "period": "2026-07-31",
+              "value": 81
             }
           ]
         },
@@ -81788,8 +81952,8 @@
           "name": "Comunidad Foral de Navarra",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 216
+              "period": "2026-07-31",
+              "value": 221
             }
           ]
         },
@@ -81798,8 +81962,8 @@
           "name": "Comunidad de Madrid",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 342
+              "period": "2026-07-31",
+              "value": 338
             }
           ]
         },
@@ -81808,8 +81972,8 @@
           "name": "Comunitat Valenciana",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 297
+              "period": "2026-07-31",
+              "value": 298
             }
           ]
         },
@@ -81818,8 +81982,8 @@
           "name": "Extremadura",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 264
+              "period": "2026-07-31",
+              "value": 268
             }
           ]
         },
@@ -81828,8 +81992,8 @@
           "name": "Galicia",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 310
+              "period": "2026-07-31",
+              "value": 309
             }
           ]
         },
@@ -81838,8 +82002,8 @@
           "name": "Illes Balears",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 201
+              "period": "2026-07-31",
+              "value": 196
             }
           ]
         },
@@ -81848,8 +82012,8 @@
           "name": "La Rioja",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 138
+              "period": "2026-07-31",
+              "value": 134
             }
           ]
         },
@@ -81858,8 +82022,8 @@
           "name": "Melilla",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 190
+              "period": "2026-07-31",
+              "value": 184
             }
           ]
         },
@@ -81868,8 +82032,8 @@
           "name": "País Vasco",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 131
+              "period": "2026-07-31",
+              "value": 130
             }
           ]
         },
@@ -81878,8 +82042,8 @@
           "name": "Región de Murcia",
           "points": [
             {
-              "period": "2026-06-30",
-              "value": 551
+              "period": "2026-07-31",
+              "value": 545
             }
           ]
         }
