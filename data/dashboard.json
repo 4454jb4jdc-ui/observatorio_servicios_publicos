@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Observatorio de servicios públicos",
-    "dataset_version": "20260822-1000-07625f303b00",
-    "last_checked": "2026-08-22T10:00:13+02:00",
+    "dataset_version": "20260823-1001-07625f303b00",
+    "last_checked": "2026-08-23T10:01:45+02:00",
     "latest_period": "2026-07-31",
     "demo": false,
     "connected_series": 176,
@@ -10,7 +10,7 @@
       {
         "source_id": "ine_population",
         "ok": true,
-        "checked_at": "2026-08-22T09:58:46+02:00",
+        "checked_at": "2026-08-23T09:59:58+02:00",
         "message": "20 territorios; 100 observaciones",
         "checksum": "ca351541b17582518a9d381ac14b84a85e71762deedeb1eaf71b1f96d97e05c1",
         "source_url": "https://www.ine.es/jaxiT3/files/t/csv_bdsc/67217.csv"
@@ -18,7 +18,7 @@
       {
         "source_id": "ine_regional_accounts",
         "ok": true,
-        "checked_at": "2026-08-22T09:59:04+02:00",
+        "checked_at": "2026-08-23T10:00:17+02:00",
         "message": "Serie hasta 2024; PIB y PIB por habitante para 20 territorios",
         "checksum": "0a08d2a45fb73e1875a61d8a2a14e5f8adaece86457d3cc9112b17662ddd9598",
         "source_url": "https://www.ine.es/daco/daco42/cre00/b2024/pr_cre.xlsx"
@@ -26,7 +26,7 @@
       {
         "source_id": "ine_epa",
         "ok": true,
-        "checked_at": "2026-08-22T09:59:11+02:00",
+        "checked_at": "2026-08-23T10:00:26+02:00",
         "message": "Serie hasta 2026T2; parados y tasa para 20 territorios",
         "checksum": "985427aab0067fcb0bfaf4e4aa74c728d86265a4851c647b87081d9f2a9dd203",
         "source_url": "https://www.ine.es/jaxiT3/files/t/es/csv_bdsc/65332.csv; https://www.ine.es/jaxiT3/files/t/es/csv_bdsc/65334.csv"
@@ -34,7 +34,7 @@
       {
         "source_id": "ine_income_poverty",
         "ok": true,
-        "checked_at": "2026-08-22T09:59:13+02:00",
+        "checked_at": "2026-08-23T10:00:29+02:00",
         "message": "ECV hasta 2025; renta y pobreza para 20 territorios",
         "checksum": "7e7d3bba73253a0974f28f3d35be1cd04ef44f82386cab8eb34c0c4902ebba91",
         "source_url": "https://www.ine.es/jaxiT3/files/t/es/csv_bdsc/9947.csv; https://www.ine.es/jaxiT3/files/t/es/csv_bdsc/9963.csv"
@@ -42,7 +42,7 @@
       {
         "source_id": "social_security_affiliation",
         "ok": true,
-        "checked_at": "2026-08-22T09:59:15+02:00",
+        "checked_at": "2026-08-23T10:00:31+02:00",
         "message": "Informe 2026-07; 20 territorios",
         "checksum": "8ccb7f9d3fc3382abf4648dd3147a696e6f4828639aff6e55df877a8e3e5d15e",
         "source_url": "https://www.seg-social.es/wps/wcm/connect/wss/be59e035-5777-4cf8-96bc-f585ccbb6580/16_Informe+Mensual+Afiliados+CCAA+202607.pdf?MOD=AJPERES&CONVERT_TO=linktext&CACHEID=ROOTWORKSPACE.Z18_2G50H38209D640QTQ57OVB2000-be59e035-5777-4cf8-96bc-f585ccbb6580-p.byliU"
@@ -50,7 +50,7 @@
       {
         "source_id": "sepe_registered_unemployment",
         "ok": true,
-        "checked_at": "2026-08-22T09:59:18+02:00",
+        "checked_at": "2026-08-23T10:00:34+02:00",
         "message": "Periodo 2026-07; 20 territorios",
         "checksum": "6541715f985b550d8176717aa9c64c3a369bdcd5b4e5b62a786bc72364c11bd3",
         "source_url": "https://www.sepe.es/SiteSepe/contenidos/que_es_el_sepe/estadisticas/datos_avance/xls/empleo/evolparo.xls; https://www.sepe.es/SiteSepe/contenidos/que_es_el_sepe/estadisticas/datos_avance/xls/empleo/evolprovsectores.xls"
@@ -58,7 +58,7 @@
       {
         "source_id": "imserso_saad_extended",
         "ok": true,
-        "checked_at": "2026-08-22T09:59:26+02:00",
+        "checked_at": "2026-08-23T10:00:43+02:00",
         "message": "14 series; corte 2026-07-31; 20 territorios",
         "checksum": "f2454564a4ccadc8adf946511c3aff9e379e1a6d398d6fbecb0db47aafa2ee63",
         "source_url": "https://imserso.es/documents/20123/11151734/estsisaad_20260731.xlsx/c05d8583-3626-9116-bdef-5a4e81a64044"
@@ -66,7 +66,7 @@
       {
         "source_id": "ine_tourist_dwellings",
         "ok": true,
-        "checked_at": "2026-08-22T09:59:27+02:00",
+        "checked_at": "2026-08-23T10:00:45+02:00",
         "message": "Serie hasta 2026M05; recuento y porcentaje para 20 territorios",
         "checksum": "a55c56d6e18ba8f0134067385e1803cb9c5a8fe874edbe4f656a91c4e36e9a46",
         "source_url": "https://www.ine.es/jaxiT3/files/t/es/csv_bd/46141.csv"
@@ -74,7 +74,7 @@
       {
         "source_id": "education_enrolment",
         "ok": true,
-        "checked_at": "2026-08-22T09:59:35+02:00",
+        "checked_at": "2026-08-23T10:00:57+02:00",
         "message": "18 series; 11546 observaciones; último curso 2024-25",
         "checksum": "9abfdc2c11d4486d5b9dde0773d8aaa79ccca6322e9518326905f0ae7d5f199c",
         "source_url": "https://www.educacionfpydeportes.gob.es/servicios-al-ciudadano/estadisticas/no-universitaria/alumnado/matriculado/series.html"
@@ -82,7 +82,7 @@
       {
         "source_id": "pensions",
         "ok": false,
-        "checked_at": "2026-08-22T09:59:36+02:00",
+        "checked_at": "2026-08-23T10:00:58+02:00",
         "message": "RuntimeError: No se localizó el fichero esperado en https://www.seg-social.es/wps/portal/wss/internet/EstadisticasPresupuestosEstudios/Estadisticas/est23/est24",
         "checksum": null,
         "source_url": null
@@ -90,7 +90,7 @@
       {
         "source_id": "imv",
         "ok": true,
-        "checked_at": "2026-08-22T09:59:42+02:00",
+        "checked_at": "2026-08-23T10:01:08+02:00",
         "message": "6 series; corte 2025-09; 20 territorios",
         "checksum": "eed619920952b0745fe85057b686f8afa1a0f05170291a4eb0943934abd51a48",
         "source_url": "https://www.inclusion.gob.es/documents/20121/0/202509++Dossier+CCAA+y+provincias.xlsx/902d4404-9d87-b413-42a0-eaf8586b720c?t=1759820962853"
@@ -98,7 +98,7 @@
       {
         "source_id": "health_waiting",
         "ok": true,
-        "checked_at": "2026-08-22T09:59:44+02:00",
+        "checked_at": "2026-08-23T10:01:11+02:00",
         "message": "14 series; corte 2025-12-31; 20 territorios en indicadores totales",
         "checksum": "a83c31ae645a86eab485d0f610c8e8dce9fb77bd3e79b3d29cbba8854155fbaf",
         "source_url": "https://www.sanidad.gob.es/estadEstudios/estadisticas/inforRecopilaciones/docs/Datos_ccaa_dic2025.pdf"
@@ -106,7 +106,7 @@
       {
         "source_id": "residences",
         "ok": true,
-        "checked_at": "2026-08-22T10:00:01+02:00",
+        "checked_at": "2026-08-23T10:01:31+02:00",
         "message": "12 series; año 2024; 20 territorios",
         "checksum": "c9931d2bea06ebaa08967f10aaf100e41f49b1c9c6743131da8ba1b9ebf09e58",
         "source_url": "https://imserso.es/documents/20123/10902543/inf_ssppmmesp2024.pdf/1432577e-5e36-5d7c-83d1-24864192dc99"
@@ -114,7 +114,7 @@
       {
         "source_id": "mivau_house_price",
         "ok": true,
-        "checked_at": "2026-08-22T10:00:10+02:00",
+        "checked_at": "2026-08-23T10:01:41+02:00",
         "message": "3 series; último trimestre 2026-Q1; 20 territorios",
         "checksum": "c214f190f26ee79c7eaf69b8ba35e7d558cf5b368fd726745d72a379798ab2b4",
         "source_url": "https://datos.gob.es/es/catalogo/e05233601-valor-tasado-de-la-vivienda"
@@ -122,7 +122,7 @@
       {
         "source_id": "pension_reserve",
         "ok": true,
-        "checked_at": "2026-08-22T10:00:10+02:00",
+        "checked_at": "2026-08-23T10:01:41+02:00",
         "message": "1 serie; último corte 2026-03; ámbito nacional",
         "checksum": "8377286f40e0026b47e83defa1fd1b9fc6b701da8d2a16ba7212c01864e8e177",
         "source_url": "https://revista.seg-social.es/-/el-fondo-de-reserva-de-la-seguridad-social-supera-los-15.200-millones-de-euros-en-abril"
@@ -130,7 +130,7 @@
       {
         "source_id": "university_system",
         "ok": true,
-        "checked_at": "2026-08-22T10:00:10+02:00",
+        "checked_at": "2026-08-23T10:01:41+02:00",
         "message": "27 series; curso 2024-25; cifras nacionales y autonómicas",
         "checksum": "5744895715d27e7b3ea9d7155976623229f350f69612f7fc4591b989ce2e3ed0",
         "source_url": "https://www.ciencia.gob.es/dam/jcr%3A747444d8-7089-4b15-97e1-0fc27874e6a7/DatosCifras_SUE2025_2026.pdf"
@@ -138,7 +138,7 @@
       {
         "source_id": "hospital_catalog",
         "ok": true,
-        "checked_at": "2026-08-22T10:00:11+02:00",
+        "checked_at": "2026-08-23T10:01:42+02:00",
         "message": "20 series; situación 2024-12-31; 848 hospitales identificados",
         "checksum": "052e3baa930011d59779a7b2b6f6d5fced3991c73b86c085271f09464cd1d146",
         "source_url": "https://www.sanidad.gob.es/estadEstudios/estadisticas/sisInfSanSNS/ofertaRecursos/hospitales/home.htm"
@@ -146,7 +146,7 @@
       {
         "source_id": "primary_care_catalog",
         "ok": true,
-        "checked_at": "2026-08-22T10:00:13+02:00",
+        "checked_at": "2026-08-23T10:01:45+02:00",
         "message": "15 series; situación 2025-12-31; 19 ámbitos territoriales",
         "checksum": "8f417625348cc698bfa42c154231febd36f80aa171dc09c9b4977188d94487fd",
         "source_url": "https://www.sanidad.gob.es/ciudadanos/prestaciones/centrosServiciosSNS/centrosSalud/home.htm"
